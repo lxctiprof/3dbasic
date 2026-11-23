@@ -1,0 +1,471 @@
+<!DOCTYPE HTML>
+<html lang="ko" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>3차원 모델링 - 3D 그래픽 기본</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-e96d0476.css">
+        <link rel="stylesheet" href="../css/chrome-d279d366.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../custom-df9bd67f.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../searchindex-58519906.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc-58498ee7.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">3D 그래픽 기본</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="3차원-모델링"><a class="header" href="#3차원-모델링">3차원 모델링</a></h1>
+<h2 id="1-3차원-모델링-개요"><a class="header" href="#1-3차원-모델링-개요">1. 3차원 모델링 개요</a></h2>
+<ul>
+<li>
+<h3 id="3차원-모델링-개념"><a class="header" href="#3차원-모델링-개념">3차원 모델링 개념</a></h3>
+<ul>
+<li>
+<p>컴퓨터 그래픽스 분야의 경우 <strong>3차원 전문 소프트웨어를 사용하여 3D 개체를 제작</strong>하는 과정</p>
+</li>
+<li>
+<p>가상공간의 입체적인 모델을 통해 실세계의 물체를 묘사하거나 혹은 물리적 환경을 만들어 가상 환경 속에서 물체 모습을 생성</p>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="3차원-모델링-기술의-특징"><a class="header" href="#3차원-모델링-기술의-특징">3차원 모델링 기술의 특징</a></h3>
+<ul>
+<li>
+<p>모델의 자유로운 수정</p>
+<ul>
+<li><strong>모델을 자유롭게 수정하고 조정</strong>할 수 있어 디자인 프로세스의 유연성을 높여주고, 아이디어를 자유롭게 시도하고 실험할 수 있게 함</li>
+</ul>
+</li>
+<li>
+<p>정밀한 모델링</p>
+<ul>
+<li><strong>높은 정밀도로 모델이 생성 가능</strong>하여 제품 디자인이나 건축 모델링과 같이 정확한 치수 또는 세부 사항이 중요한 분야에서 매우 유용</li>
+</ul>
+</li>
+<li>
+<p>다양한 표현 방식</p>
+<ul>
+<li>외관 표현, 와이어프레임, 색상 및 텍스처, 랜더링 등 <strong>다양한 표현 방식을 통해 시각화</strong> 가능</li>
+</ul>
+</li>
+<li>
+<p>애니메이션과 상호작용</p>
+<ul>
+<li>움직임과 상호작용을 통해 <strong>더 생동감 있게</strong> 만들 수 있어 애니메이션, 시뮬레이션, 가상 현실 및 게임 개발 같은 분야에서 중요한 요소가 됨</li>
+</ul>
+</li>
+<li>
+<p>다양한 응용분야</p>
+<ul>
+<li><strong>영화와 게임 산업</strong>에서는 시각 효과와 가상 세계의 구축에 사용되며, *건축 및 제조업**에서는 제품 디자인 및 시뮬레이션에 활용</li>
+</ul>
+</li>
+<li>
+<p>실시간 시각화</p>
+<ul>
+<li>3차원 모델링 소프트웨어는 <strong>실시간을 모델을 조작하고 시각화</strong>할 수 있는 기능 제공</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="3차원-모델링의-작동-방식"><a class="header" href="#3차원-모델링의-작동-방식">3차원 모델링의 작동 방식</a></h3>
+  <img src="../images/1-24.png" width="100%" height="100%"> 
+</li>
+</ul>
+<h2 id="2-3차원-형상-표현-기법"><a class="header" href="#2-3차원-형상-표현-기법">2. 3차원 형상 표현 기법</a></h2>
+<ul>
+<li>
+<h3 id="와이어-프레임-모델링wire-frame-modeling"><a class="header" href="#와이어-프레임-모델링wire-frame-modeling">와이어 프레임 모델링(Wire Frame Modeling)</a></h3>
+<ul>
+<li>
+<p>1960년대 처음으로 발견된 방식으로 직선, 점, 호 등의 기본적인 기하학적 요소로 마치 <strong>철사를 연결한 구조물과 같이 모델링</strong></p>
+</li>
+<li>
+<p><strong>소요시간이 적게 들고 차지하는 메모리의 용량이 적기</strong> 때문에 주로 2차원 도면 출력을 위한 평면 가공과 용도에 적합한 방식</p>
+</li>
+<li>
+<p>경계 정보나 부피와 같은 <strong>물리적 정보를 계산할 수 없고, 실체감이 없어</strong> 형상을 정확하게 파악하기 힘듦</p>
+  <img src="../images/1-25.png" width="50%" height="50%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="서페이스-모델링surface-modeling"><a class="header" href="#서페이스-모델링surface-modeling">서페이스 모델링(Surface Modeling)</a></h3>
+<ul>
+<li>
+<p><strong>면을 이용해서 물체를 모델링</strong>하는 방법으로 표면 모델링이 정교함</p>
+</li>
+<li>
+<p>기하 곡면을 처리하는 기법으로 <strong>정교한 곡선 표면</strong>이 필요한 자동차, 항공, 조선 산업 등에서 필요</p>
+</li>
+<li>
+<p>컴퓨터의 속도와 메모리 용량을 적게 쓰고 주로 렌더링을 하기 위한 목적이나 애니메이션 등의 화면용으로 데이터를 출력하는 용도로 사용</p>
+</li>
+<li>
+<p><strong>물리적 성질을 계산할 수 없고, 물체 내부의 정보가 없음</strong></p>
+  <img src="../images/1-26.png" width="50%" height="50%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="솔리드-모델링solid-modeling"><a class="header" href="#솔리드-모델링solid-modeling">솔리드 모델링(Solid Modeling)</a></h3>
+<ul>
+<li>
+<p>가장 진보적인 방식으로 <strong>3차원 형상의 표면</strong> 뿐만 아니라 내부의 질량, 체적, 부피 등 <strong>여러 정보</strong>가 담겨 있으며, 점, 선, 면의 집합체로 되어 있음</p>
+</li>
+<li>
+<p><strong>물체의 정확한 모델링과 분석</strong>이 필요한 다양한 분야에서 중요한 역할을 하며, 제품 개발과 시뮬레이션 작업을 지원하는데 사용</p>
+</li>
+<li>
+<p>정확한 기하학적 모델링이 가능하나, <strong>데이터 구조가 복잡</strong>해 고사양 컴퓨터를 필요로 하고 작업을 위한 필요 데이터량이 많음</p>
+  <img src="../images/1-27.png" width="50%" height="50%"> 
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3차원-모델링-기술"><a class="header" href="#3-3차원-모델링-기술">3. 3차원 모델링 기술</a></h2>
+<ul>
+<li>
+<h3 id="폴리곤-모델링polygonal-modeling"><a class="header" href="#폴리곤-모델링polygonal-modeling">폴리곤 모델링(Polygonal Modeling)</a></h3>
+<ul>
+<li>
+<p>가장 전통적인 방식으로 삼각형 또는 사각형의 폴리곤을 구성하는 <b>점, 선, 면의 집합으로 메쉬(mesh)를 제작</b>하는 방식</p>
+</li>
+<li>
+<p><strong>쉽고 직관적이며 표면을 추가하거나 변형하기 쉽다</strong>는 장점이 있지만 곡선 표현이 부족하여 <b>엘리어싱(Aliasing) 현상</b> 발생</p>
+  <img src="../images/1-28.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="넙스-모델링nurbs-modeling"><a class="header" href="#넙스-모델링nurbs-modeling">넙스 모델링(Nurbs Modeling)</a></h3>
+<ul>
+<li>
+<p>비정형 유리 B-스플라인(Non-Uniform Rational B-spline)의 약자로 <strong>폴리곤의 단점을 보완</strong>하기 위해 만들어진 기술로 정밀한 표현 가능</p>
+</li>
+<li>
+<p>수학적으로 <b>선(Curve)을 그려 형태를 잡고 그 형태의 선들을 이용해 면을 구현</b>하는 방식</p>
+  <img src="../images/1-29.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="스컬프팅-모델링sculpting-modeling"><a class="header" href="#스컬프팅-모델링sculpting-modeling">스컬프팅 모델링(Sculpting Modeling)</a></h3>
+<ul>
+<li>
+<p><strong>디지털로 모델을 조각하거나 형성</strong>하는 기술로 3차원 모델링 소프트웨어를 사용하여 고해상도 모델을 생성</p>
+</li>
+<li>
+<p><strong>자연스러운 형태</strong>와 디테일을 쉽게 추가할 수 있으며 <strong>고해상도 모델링</strong>에 적합</p>
+</li>
+<li>
+<p>학습 곡선이 높고 복잡한 모델링에는 시간이 많이 소요됨</p>
+  <img src="../images/1-30.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="모션캡쳐motion-capture"><a class="header" href="#모션캡쳐motion-capture">모션캡쳐(Motion Capture)</a></h3>
+<p>-** 실제 움직임을 디지털 환경으로 전송**하기 위해 사용되는 기술로 센서를 사용하여 인간 또는 동물의 움직임을 기록하고 3차원 모델에 적용 가능</p>
+<ul>
+<li>
+<p>실제 움직임을 자연스럽게 적용할 수 있으며 <strong>높은 리얼리즘과 효율성</strong>을 제공</p>
+</li>
+<li>
+<p><strong>모션 캡쳐 장비의 비용과 복잡성</strong>이 있으며 일부 움직임이 정확하게 캡쳐되지 않을 수 있음</p>
+  <img src="../images/1-31.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="사진측량photogrammetry"><a class="header" href="#사진측량photogrammetry">사진측량(Photogrammetry)</a></h3>
+<ul>
+<li>
+<p><strong>여러 각도에서 촬영된 사진을 분석</strong>하여 객체의 형태와 표면을 재구성</p>
+</li>
+<li>
+<p>현실 세계의 정확한 모델을 생성할 수 있으며, <strong>비교적 저렴한 장비와 소프트웨어를 사용</strong>하여 구현 가능</p>
+</li>
+<li>
+<p>처리 시간이 오래 걸리고, 특정한 조명과 환경에 민감</p>
+  <img src="../images/1-32.png" width="100%" height="100%"> 
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-랜더링rendering-텍스처링texturing-라이팅lighting"><a class="header" href="#4-랜더링rendering-텍스처링texturing-라이팅lighting">4. 랜더링(Rendering), 텍스처링(Texturing), 라이팅(Lighting)</a></h2>
+<ul>
+<li>
+<h3 id="랜더링"><a class="header" href="#랜더링">랜더링</a></h3>
+<ul>
+<li>
+<p>3차원 장면을 바탕으로 컴퓨터를 이용해 <strong>사진이나 영상을 만들어내는 과정</strong> 또는 그러한 기법</p>
+</li>
+<li>
+<p>3차원 모델에 <strong>질감</strong>을 입히고 <strong>여러 광학 효과</strong>를 가미하는 과정</p>
+<ul>
+<li>색상, 사실성, 음영, 형태 표현, 재질 등의 여러 요소가 고려</li>
+</ul>
+</li>
+<li>
+<p>아키텍처, 디자인 시각화 등 각각의 분야에 따라 서로 다른 기능 및 기술을 활용</p>
+  <img src="../images/1-33.png" width="100%" height="100%"> 
+</li>
+</ul>
+<blockquote>
+<p>3차원 렌더링과 3차원 시각화를 혼용되어 사용되기도 하지만, 3차원 렌더링은 사실 3차원 시각화 프로세스의 마지막 단계임</p>
+</blockquote>
+</li>
+<li>
+<h3 id="텍스쳐링"><a class="header" href="#텍스쳐링">텍스쳐링</a></h3>
+<ul>
+<li>3차원 개체에 <strong>이미지, 패턴 및 표면 특성을 적용하는 과정</strong>으로 텍스처를 조작하여 거칠기(roughness), 광택(specular), 투명도(opacity) 등의 속성을 제작
+<ul>
+<li>
+<p>수동으로 텍스처를 칠하고 생성하는 방법</p>
+</li>
+<li>
+<p>실제 재질을 스캔하여 텍스처로 변환하는 방법</p>
+</li>
+<li>
+<p>컴퓨터 알고리즘이 텍스처를 자동으로 생성하도록 하는 절차적 생성 방법</p>
+   <img src="../images/1-34.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="라이트닝"><a class="header" href="#라이트닝">라이트닝</a></h3>
+<ul>
+<li>
+<p>장면을 가시화하는 것뿐만 아니라 재질이 정확하게 표시되게 하려면 <strong>조명</strong>이 필요</p>
+</li>
+<li>
+<p>빛이 표면과 상호하는 매개변수로 조정하고, 조명이 잘못되면 모델의 모양도 이상해짐</p>
+   <img src="../images/1-35.png" width="100%" height="100%"> 
+</li>
+</ul>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../01-geo3D/1-1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../02-install/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../01-geo3D/1-1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../02-install/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-09f2665d.js"></script>
+
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-abc7f01d.js"></script>
+        <script src="../book-609e4cb8.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

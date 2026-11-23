@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>3D 모델링 이론 및 실습이론 - 3D 그래픽 기본</title>
+        <title>3차원 공간정보 - 3D 그래픽 기본</title>
 
 
         <!-- Custom HTML head -->
@@ -12,34 +12,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="favicon-de23e50b.svg">
-        <link rel="shortcut icon" href="favicon-8114d1fc.png">
-        <link rel="stylesheet" href="css/variables-8adf115d.css">
-        <link rel="stylesheet" href="css/general-e96d0476.css">
-        <link rel="stylesheet" href="css/chrome-d279d366.css">
-        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-e96d0476.css">
+        <link rel="stylesheet" href="../css/chrome-d279d366.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="custom-df9bd67f.css">
+        <link rel="stylesheet" href="../custom-df9bd67f.css">
 
 
         <!-- Provide site root and default themes to javascript -->
         <script>
-            const path_to_root = "";
+            const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-ff539535.js";
+            window.path_to_searchindex_js = "../searchindex-58519906.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-7cbb4c44.js"></script>
+        <script src="../toc-58498ee7.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -106,7 +106,7 @@
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
             <noscript>
-                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
             </noscript>
             <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -141,7 +141,7 @@
                     <h1 class="menu-title">3D 그래픽 기본</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
                         </a>
 
@@ -175,233 +175,354 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="3d-모델링-이론-및-실습이론"><a class="header" href="#3d-모델링-이론-및-실습이론">3D 모델링 이론 및 실습이론</a></h1>
-<h2 id="2d-graphics"><a class="header" href="#2d-graphics">2D graphics</a></h2>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-03.jpg" alt="2D graphics"><span class="img-wrapper"><img src="images/slide-03.jpg" alt="2D graphics"></span></label></p>
+                        <h1 id="3차원-공간정보"><a class="header" href="#3차원-공간정보">3차원 공간정보</a></h1>
+<h2 id="1-3차원-공간정보의-개념"><a class="header" href="#1-3차원-공간정보의-개념">1. 3차원 공간정보의 개념</a></h2>
 <ul>
-<li>점, 선, 면으로 이루어짐</li>
-<li>높이에 대한 개념이 없음</li>
-<li>X, Y축으로 위치를 표시</li>
-<li>파워포인트에서 사각형 등 작업</li>
-</ul>
-<h2 id="3d-graphics"><a class="header" href="#3d-graphics">3D graphics</a></h2>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-04.jpg" alt="3D graphics"><span class="img-wrapper"><img src="images/slide-04.jpg" alt="3D graphics"></span></label></p>
+<li>
+<h3 id="공간정보geospatial-information-개념"><a class="header" href="#공간정보geospatial-information-개념">공간정보(Geospatial Information) 개념</a></h3>
 <ul>
-<li>점, 선, 면으로 이루어짐</li>
-<li><strong>높이</strong> 개념이 추가됨</li>
-<li>X, Y, Z축으로 위치를 표시</li>
+<li>지상, 지하, 수상, 수중 등 공간 상에 존재하는 자연 또는 인공적인 객체에 대한 <strong>위치정보</strong> 및 이와 관련된 <strong>공간적 인지와 의사결정에 필요한 정보</strong>(공간정보산업 진흥법)<br><br>
+<img src="../images/1-1.png" width="90%" height="90%"></li>
 </ul>
-<h2 id="x-y-z-축을-쉽게-알아보는-법"><a class="header" href="#x-y-z-축을-쉽게-알아보는-법">X, Y, Z 축을 쉽게 알아보는 법</a></h2>
+</li>
+<li>
+<h3 id="2차원-공간정보의-한계"><a class="header" href="#2차원-공간정보의-한계">2차원 공간정보의 한계</a></h3>
 <ul>
-<li>2D 그래픽에서는 가로가 X축, 세로가 Y축</li>
-<li>3D 그래픽에서는 화면 회전이 많아 X, Y, Z축을 한 번에 알아채기 어렵다</li>
-<li>축의 색을 RGB 순서로 기억하면 쉽다</li>
+<li>지적도, 수치지형도, 도로망은 대부분 <strong>x, y 평면</strong> 위에 표현되지만 현실은 다음과 같은 문제가 있음
+<ul>
+<li>
+<p>건물의 <strong>높이 · 층수</strong>, 지하 공간, 육교 · 고가도로의 <strong>겹침</strong>을 표현하기 어려움</p>
+</li>
+<li>
+<p><strong>일조 · 조망 · 그림자 · 침수</strong> 같은 분석은 높이 정보가 없으면 불가능</p>
+</li>
+<li>
+<p>비전문가가 지도를 보고 <strong>직관적으로 이해</strong>하기 어려움</p>
+</li>
 </ul>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="3차원-공간정보-개념"><a class="header" href="#3차원-공간정보-개념">3차원 공간정보 개념</a></h3>
+<ul>
+<li>
+<p>2차원의 공간정보에 <b>높이(심도) · 영상 · 속성 정보를 추가</b>하여 현실세계와 동일한 입체감과 질감을 가지도록 표현한 지리정보</p>
+  <img src="../images/1-2.png" width="90%" height="90%">   
+</li>
+<li>
+<p>2차원 공간정보는 현실세계에 대해 점 · 선 · 면의 2차원 객체로 일반화함으로써 데이터 손실이 발생하여 현실세계에 대한 이해와 분석에 한계</p>
 <div class="table-wrapper">
 <table>
 <thead>
-<tr><th>색</th><th>축</th></tr>
+<tr><th>항목</th><th>2D 표현</th><th>3D 표현</th></tr>
 </thead>
 <tbody>
-<tr><td>R: Red</td><td>X</td></tr>
-<tr><td>G: Green</td><td>Y</td></tr>
-<tr><td>B: Blue</td><td>Z</td></tr>
+<tr><td>좌표</td><td>X, Y</td><td>X, Y, Z</td></tr>
+<tr><td>건물</td><td>외곽선</td><td>외곽선과 높이·지붕 형상</td></tr>
+<tr><td>도로</td><td>중심선 또는 면</td><td>폭 · 높이 · 경사 · 포장 구조</td></tr>
+<tr><td>지형</td><td>등고선 · 표고점 · DEM</td><td>표면 메시 또는 높이장</td></tr>
+<tr><td><br></td><td></td><td></td></tr>
 </tbody>
 </table>
 </div>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-08.jpg" alt="X, Y, Z 축 색상"><span class="img-wrapper"><img src="images/slide-08.jpg" alt="X, Y, Z 축 색상"></span></label></p>
-<h2 id="x-y-z-축-문제"><a class="header" href="#x-y-z-축-문제">X, Y, Z 축 문제</a></h2>
-<p>1칸을 1로 봤을 때,</p>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-09.jpg" alt="X, Y, Z 축 문제 예시"><span class="img-wrapper"><img src="images/slide-09.jpg" alt="X, Y, Z 축 문제 예시"></span></label></p>
-<ul>
-<li>빨간 점의 X좌표는 4</li>
-<li>빨간 점의 Z좌표는 2</li>
-<li>빨간 점의 Y좌표는 0</li>
-</ul>
-<h3 id="문제-1"><a class="header" href="#문제-1">문제 1</a></h3>
-<p>빨간 점의 X, Y, Z좌표는?</p>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-10.jpg" alt="문제 1"><span class="img-wrapper"><img src="images/slide-10.jpg" alt="문제 1"></span></label></p>
-<h3 id="문제-2"><a class="header" href="#문제-2">문제 2</a></h3>
-<p>빨간 점의 X, Y, Z좌표는?</p>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-11.jpg" alt="문제 2"><span class="img-wrapper"><img src="images/slide-11.jpg" alt="문제 2"></span></label></p>
-<h3 id="문제-3"><a class="header" href="#문제-3">문제 3</a></h3>
-<p>빨간 점의 X, Y, Z좌표는?</p>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-12.jpg" alt="문제 3"><span class="img-wrapper"><img src="images/slide-12.jpg" alt="문제 3"></span></label></p>
-<h3 id="문제-4"><a class="header" href="#문제-4">문제 4</a></h3>
-<p>빨간 점의 X, Y, Z좌표는?</p>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-13.jpg" alt="문제 4"><span class="img-wrapper"><img src="images/slide-13.jpg" alt="문제 4"></span></label></p>
-<h3 id="문제-5"><a class="header" href="#문제-5">문제 5</a></h3>
-<p>빨간 점의 X, Y, Z좌표는?</p>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-14.jpg" alt="문제 5"><span class="img-wrapper"><img src="images/slide-14.jpg" alt="문제 5"></span></label></p>
-<h3 id="문제-6"><a class="header" href="#문제-6">문제 6</a></h3>
-<p>빨간 점의 X, Y, Z좌표는?</p>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-15.jpg" alt="문제 6"><span class="img-wrapper"><img src="images/slide-15.jpg" alt="문제 6"></span></label></p>
-<h3 id="문제-7"><a class="header" href="#문제-7">문제 7</a></h3>
-<p>빨간 점의 X, Y, Z좌표는?</p>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-16.jpg" alt="문제 7"><span class="img-wrapper"><img src="images/slide-16.jpg" alt="문제 7"></span></label></p>
-<h2 id="복습문제-1"><a class="header" href="#복습문제-1">복습문제 1</a></h2>
-<p><a href="https://profkim2000.github.io/board/3dgraphics/quiz/quiz-01.html">https://profkim2000.github.io/board/3dgraphics/quiz/quiz-01.html</a></p>
-<h2 id="perspective-vs-orthographic"><a class="header" href="#perspective-vs-orthographic">Perspective vs Orthographic</a></h2>
-<ul>
-<li><strong>perspective</strong>: 입체적인
-<ul>
-<li>멀리 있는 물체는 작게, 가까운 물체는 크게 보이는 등 입체감이 있음</li>
-</ul>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4OjqN57VVY?si=WvCn18Nlq_B1U-8H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>   
 </li>
-<li><strong>orthographic</strong>: 직교투영. 입체적이지 않은
-<ul>
-<li>거리와 상관없이 물체의 크기가 똑같이 느껴진다</li>
-<li>Top view, Front view, Right view 등에서 사용</li>
-</ul>
-</li>
-<li>단축키: 숫자키패드 <code>5</code></li>
-</ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-19.jpg" alt="Perspective vs Orthographic"><span class="img-wrapper"><img src="images/slide-19.jpg" alt="Perspective vs Orthographic"></span></label></p>
-<h2 id="오브젝트의-이동-회전-크기"><a class="header" href="#오브젝트의-이동-회전-크기">오브젝트의 이동, 회전, 크기</a></h2>
-<ul>
-<li><strong>이동</strong>: <code>G</code>
-<ul>
-<li>축 따라 이동: <code>G</code>키를 누른 후 원하는 축에 따라 (<code>X</code> / <code>Y</code> / <code>Z</code>)</li>
-<li>Z축으로의 이동은 제한하고 X, Y축으로만 이동할 때는 <code>Shift</code> + <code>Z</code></li>
-</ul>
-</li>
-<li><strong>회전</strong>: <code>R</code>
-<ul>
-<li>축 기준 회전: <code>R</code>키를 누른 후 원하는 축에 따라 (<code>X</code> / <code>Y</code> / <code>Z</code>)</li>
-</ul>
-</li>
-<li><strong>크기</strong>: <code>S</code>
-<ul>
-<li>축 따라 크기 조정: <code>S</code>키를 누른 후 원하는 축에 따라 (<code>X</code> / <code>Y</code> / <code>Z</code>)</li>
 </ul>
 </li>
 </ul>
-<h2 id="edit-mode"><a class="header" href="#edit-mode">Edit mode</a></h2>
+<h2 id="2-3차원-공간정보-활용"><a class="header" href="#2-3차원-공간정보-활용">2. 3차원 공간정보 활용</a></h2>
+<ul>
+<li>
+<h3 id="활용-분야"><a class="header" href="#활용-분야">활용 분야</a></h3>
+</li>
+</ul>
 <div class="table-wrapper">
 <table>
 <thead>
-<tr><th>기능</th><th>단축키</th></tr>
+<tr><th>분야</th><th>예시</th></tr>
 </thead>
 <tbody>
-<tr><td>Edit mode / Object mode 변경</td><td><code>Tab</code></td></tr>
-<tr><td>vertex(점) 수정</td><td><code>1</code></td></tr>
-<tr><td>edge(모서리, 선) 수정</td><td><code>2</code></td></tr>
-<tr><td>face(면) 수정</td><td><code>3</code></td></tr>
-<tr><td>Extrude(돌출)</td><td><code>E</code></td></tr>
-<tr><td>bevel(베벨, 모따기)</td><td><code>Ctrl</code> + <code>B</code></td></tr>
+<tr><td>도시계획</td><td>경관 · 조망 분석, 일조권 검토, 스카이라인 시뮬레이션</td></tr>
+<tr><td>방재</td><td>침수 시뮬레이션, 산사태 위험 지역 표현</td></tr>
+<tr><td>건설 · 시설물</td><td>BIM–GIS 연계, 지하 매설물 관리</td></tr>
+<tr><td>스마트시티 · 디지털트윈</td><td>도시 전체의 3D 모델에 센서 데이터 연동</td></tr>
+<tr><td>관광 · 문화재</td><td>3D 스캔한 문화재, 가상 투어</td></tr>
+<tr><td>게임 · 메타버스</td><td>실제 도시를 닮은 가상 공간</td></tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>
+<h3 id="lx플랫폼-개요"><a class="header" href="#lx플랫폼-개요">LX플랫폼 개요</a></h3>
+<ul>
+<li>
+<p>수요기관 독립 운영이 가능한 <strong>클라우드 인프라 및 개발환경 제공</strong>으로 차별화된 <strong>공간정보 기반 행정정보 활용</strong> 지원<br></p>
+  <img src="../images/1-3.jpg" width="100%" height="100%">   
+</li>
+</ul>
+</li>
+<li>
+<h3 id="lx-플랫폼-서비스-구성-현황"><a class="header" href="#lx-플랫폼-서비스-구성-현황">LX 플랫폼 서비스 구성 현황</a></h3>
+  <img src="../images/1-4.jpg" width="100%" height="100%">   
+</li>
+<li>
+<h3 id="lx플랫폼-공통기능-시연"><a class="header" href="#lx플랫폼-공통기능-시연">LX플랫폼 공통기능 시연</a></h3>
+  <img src="../images/1-23.png" width="100%" height="100%">   
+  <iframe width="640" height="360" src="https://www.youtube.com/embed/kVF_m8Fmh-U?si=Zxrm1Eo_o6bd4kST" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</li>
+</ul>
+<h2 id="2-3차원-공간정보-구축"><a class="header" href="#2-3차원-공간정보-구축">2. 3차원 공간정보 구축</a></h2>
+<ul>
+<li>
+<h3 id="3차원-공간정보-자료원"><a class="header" href="#3차원-공간정보-자료원">3차원 공간정보 자료원</a></h3>
+<ul>
+<li>
+<p>3차원 지형</p>
+<ul>
+<li>항공레이저 촬영으로 현실세계 <strong>지형을 3차원</strong>으로 표현한 데이터</li>
+</ul>
+</li>
+<li>
+<p>정사영상</p>
+<ul>
+<li>3차원 공간정보에 활용되는 <strong>배경지도</strong>(항공사진 촬영을 통해 하늘에서 수직으로 촬영하여 제작한 영상)</li>
+</ul>
+</li>
+<li>
+<p>3차원 입체모형</p>
+<ul>
+<li>
+<p>건물, 도로 등의 시설물을 정밀 모델링하여 <strong>현실 세계와 동일</strong>하게 구축한 데이터</p>
+  <img src="../images/1-5.png" width="100%" height="100%"> 
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="3차원-공간정보-구축방법"><a class="header" href="#3차원-공간정보-구축방법">3차원 공간정보 구축방법</a></h3>
+<ul>
+<li>
+<p>항공사진 촬영</p>
+<ul>
+<li>
+<p>실감정사영상 제작 및 3차원 가시화 모델을 제작하기 위해 <strong>일정한 중복도</strong>로 동서남북을 교차해 <strong>촬영</strong></p>
+  <img src="../images/1-6.png" width="80%" height="80%"> 
+</li>
+</ul>
+</li>
+<li>
+<p>항공레이저 측량</p>
+<ul>
+<li>
+<p><strong>지표면의 높이값을 정밀 추출</strong>하기 위해 항공기에 라이다(LiDAR)를 부착하여 지형을 스캔, 3차원 지형데이터 정보(수치표고모형, Digital Elevation Model)를 취득</p>
+  <img src="../images/1-7.png" width="80%" height="80%"> 
+</li>
+</ul>
+</li>
+<li>
+<p>3차원 가시화 모델</p>
+<ul>
+<li>
+<p>항공사진 및 수치표고모형 성과에서 건물 등의 구조물에 대해 실제 형상과 같은 <strong>3차원 가시화 모델</strong>을 제작</p>
+  <img src="../images/1-8.png" width="80%" height="80%"> 
+</li>
+</ul>
+</li>
+<li>
+<p>실감정사영상</p>
+<ul>
+<li>
+<p>수치표고모형과 3차원 가시화 모델을 이용하여 지형 및 건물 구조물의 오류를 모두 제거한 <strong>고정밀 영상지도 제작</strong></p>
+  <img src="../images/1-9.png" width="80%" height="80%"> 
+</li>
+</ul>
+</li>
+<li>
+<p>3차원 공간정보 구축</p>
+<ul>
+<li>
+<p>자동영상매칭 S/W를 활용하여 자동으로 <strong>실감정사영상, 수치표면모형 및 3차원 가시화 모델 제작</strong></p>
+  <img src="../images/1-10.png" width="100%" height="100%"> 
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-공간정보의-기하-유형과-3d-객체"><a class="header" href="#3-공간정보의-기하-유형과-3d-객체">3. 공간정보의 기하 유형과 3D 객체</a></h2>
+<img src="../images/1-11.png" width="100%" height="100%"> 
+<ul>
+<li>
+<h3 id="지형데이터"><a class="header" href="#지형데이터">지형데이터</a></h3>
+<ul>
+<li>
+<p><strong>고도 값이 입력</strong>된 바이너리(shp, dem 등), 아스키(dsf, asc 등), 이미지 파일(tiff, img)을 토대로 3차원 지형데이터로 생성</p>
+  <img src="../images/1-12.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="영상-데이터"><a class="header" href="#영상-데이터">영상 데이터</a></h3>
+<ul>
+<li>
+<p>RGB 밴드가 포함된 이미지 파일(tiff, img 등)을 토대로 3차원 지형데이터에 영상을 생성</p>
+</li>
+<li>
+<p>주로 <strong>위성영상 혹은 항공사진</strong>을 이용하고, 생성의 개념보다는 지형에 덮어씌우는 개념</p>
+   <img src="../images/1-13.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="다면체-데이터"><a class="header" href="#다면체-데이터">다면체 데이터</a></h3>
+<ul>
+<li>
+<p>2차원의 <strong>폴리곤 데이터에 높이 값을 적용</strong>하여 다면체 데이터로 생성</p>
+</li>
+<li>
+<p>수치지형도를 기반으로 건물데이터를 생성할 때 주로 사용</p>
+  <img src="../images/1-14.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="평면-데이터"><a class="header" href="#평면-데이터">평면 데이터</a></h3>
+<ul>
+<li>
+<p>2차원의 <strong>폴리곤 데이터에 높이 값을 적용하지 않고, 지형의 굴곡</strong>에 맞춰 표출</p>
+</li>
+<li>
+<p>주로 도로, 인도 등의 높이가 없다고 판단되는 데이터 표출에 사용</p>
+  <img src="../images/1-15.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="라인-데이터"><a class="header" href="#라인-데이터">라인 데이터</a></h3>
+<ul>
+<li>
+<p>2차원의 <strong>라인 데이터를 높이 값을 지정하지 않고, 지형의 굴곡</strong>에 맞춰 표출</p>
+</li>
+<li>
+<p>주로 경계선(행정경계 등) 데이터 표출에 사용</p>
+  <img src="../images/1-16.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="파이프-데이터"><a class="header" href="#파이프-데이터">파이프 데이터</a></h3>
+<ul>
+<li>
+<p>2차원의 <strong>라인 데이터에 두께 및 높이 값을 적용</strong>하여 파이프 형태의 데이터 표출</p>
+</li>
+<li>
+<p>주로 지하시설물(상수관, 하수관 등) 데이터 표출에 사용</p>
+  <img src="../images/1-17.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="빌보드-데이터"><a class="header" href="#빌보드-데이터">빌보드 데이터</a></h3>
+<ul>
+<li>
+<p>2차원의 포인트 데이터를 기준으로 <strong>연속적으로 동일한 이미지를 적용</strong>하여 효출</p>
+</li>
+<li>
+<p>주로 가로수 표현에 적용</p>
+  <img src="../images/1-18.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="모델링-데이터"><a class="header" href="#모델링-데이터">모델링 데이터</a></h3>
+<ul>
+<li>
+<p>그래픽 도구로 디테일하게 만든 <strong>모델링 데이터를 표출</strong>하는데 사용</p>
+</li>
+<li>
+<p>랜드마크선 시설물(63빌딩, 남산타워 등)을 표출하는데 사용</p>
+  <img src="../images/1-19.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="poipoint-of-interests"><a class="header" href="#poipoint-of-interests">POI(Point of Interests)</a></h3>
+<ul>
+<li>
+<p>2차원의 <b>포인트 데이터를 기준으로 아이콘(이미지) 및 텍스트</b> 표출</p>
+</li>
+<li>
+<p>주로 명칭 표출에 사용</p>
+  <img src="../images/1-20.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-3차원-데이터-표출기법"><a class="header" href="#4-3차원-데이터-표출기법">4. 3차원 데이터 표출기법</a></h2>
+<ul>
+<li>
+<h3 id="lodlevel-of-detail"><a class="header" href="#lodlevel-of-detail">LOD(Level of Detail)</a></h3>
+<ul>
+<li>
+<p>“멀리 있는 물체는 잘 보이지 않는다“는 생각을 바탕으로 개발된 모델로 3차원 GIS 데이터를 <strong>보다 효율적이고 빠른 속도로 가시화</strong>하기 위해 적용하는 기술</p>
+</li>
+<li>
+<p>사용자 시점으로부터 거리에 따라 지형, 영상, 3차원 객체의 <strong>정밀도와 해상도를 단계적으로 표현</strong>하는 기술</p>
+  <img src="../images/1-21.png" width="100%" height="100%"> 
+  <img src="../images/1-22.png" width="100%" height="100%"> 
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-3차원-데이터-저장형식"><a class="header" href="#5-3차원-데이터-저장형식">5. 3차원 데이터 저장형식</a></h2>
+<ul>
+<li>
+<h3 id="주요-3d-파일-포맷"><a class="header" href="#주요-3d-파일-포맷">주요 3D 파일 포맷</a></h3>
+</li>
+</ul>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>포맷</th><th>확장자</th><th>특징</th><th>용도</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>glTF / GLB</strong></td><td>.gltf / .glb</td><td>웹용 표준, 용량 작음, 재질·텍스처·애니메이션 포함 (“3D의 JPEG”)</td><td><strong>WebGIS, 웹 3D</strong></td></tr>
+<tr><td>OBJ</td><td>.obj (+.mtl)</td><td>단순·범용, 텍스트 기반, 애니메이션 없음</td><td>교환</td></tr>
+<tr><td>FBX</td><td>.fbx</td><td>애니메이션 포함, 게임 엔진</td><td>Unity, Unreal</td></tr>
+<tr><td>STL</td><td>.stl</td><td>형상만(색·재질 없음)</td><td>3D 프린팅</td></tr>
+<tr><td>Blender</td><td>.blend</td><td>Blender 원본(모든 정보 보존)</td><td>작업 원본</td></tr>
+<tr><td>IFC</td><td>.ifc</td><td>BIM 표준</td><td>건축</td></tr>
+<tr><td>CityGML</td><td>.gml</td><td><strong>속성 + 구조</strong> 가진 도시 모델 국제 표준</td><td>공간정보</td></tr>
+<tr><td>3D Tiles</td><td>tileset.json + .b3dm/.glb</td><td>Cesium 대용량 스트리밍</td><td>도시 전체</td></tr>
 </tbody>
 </table>
 </div>
 <blockquote>
-<p>모깎기: 모따기한 후 마우스 휠</p>
+<p>✅ <strong>작업 원칙</strong>: 원본은 <code>.blend</code>로 저장하고, 배포용은 <code>.glb</code>로 내보냄</p>
 </blockquote>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-21.jpg" alt="Edit mode - bevel"><span class="img-wrapper"><img src="images/slide-21.jpg" alt="Edit mode - bevel"></span></label></p>
-<h2 id="modeling모델링"><a class="header" href="#modeling모델링">Modeling(모델링)</a></h2>
 <ul>
-<li>빌딩 등의 겉 모습</li>
-</ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-22.jpg" alt="Modeling"><span class="img-wrapper"><img src="images/slide-22.jpg" alt="Modeling"></span></label></p>
-<h2 id="texture텍스처"><a class="header" href="#texture텍스처">Texture(텍스처)</a></h2>
-<ul>
-<li>빌딩 등 model의 겉면 이미지</li>
-</ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-23.jpg" alt="Texture"><span class="img-wrapper"><img src="images/slide-23.jpg" alt="Texture"></span></label></p>
-<h2 id="light조명"><a class="header" href="#light조명">Light(조명)</a></h2>
-<ul>
-<li>모델에 빛을 줘 밝기와 그림자 효과를 준다</li>
-</ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-24.jpg" alt="Light"><span class="img-wrapper"><img src="images/slide-24.jpg" alt="Light"></span></label></p>
-<h2 id="render렌더"><a class="header" href="#render렌더">Render(렌더)</a></h2>
-<ul>
-<li>model, texture, light, 카메라 등을 모두 계산해 최종 이미지를 만들어 내는 것</li>
-</ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-25.jpg" alt="Render"><span class="img-wrapper"><img src="images/slide-25.jpg" alt="Render"></span></label></p>
-<h2 id="동영상"><a class="header" href="#동영상">동영상</a></h2>
-<ul>
-<li><strong>키프레임(keyframe)</strong>
-<ul>
-<li>동영상을 만드는 모든 프로그램에서 사용</li>
-<li>동작을 정의하는 가장 쉬운 방법</li>
-<li><strong>Interpolation</strong>
-<ul>
-<li>0초에 A지점을 키프레임으로 지정하고,</li>
-<li>3초에 B지점을 키프레임으로 지정하면,</li>
-<li>0~3초 사이의 중간 지점을 자동으로 생성해서 이동하는 것처럼 만들어줌</li>
-</ul>
+<li>
+<h3 id="포맷-선택-기준"><a class="header" href="#포맷-선택-기준">포맷 선택 기준</a></h3>
 </li>
 </ul>
-</li>
-<li><strong>주사위가 굴러가는 동영상</strong>
-<ul>
-<li>이동과 회전 키프레임이 적절하게 설정되어야 자연스럽게 보임</li>
-</ul>
-</li>
-</ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-27.jpg" alt="주사위 동영상"><span class="img-wrapper"><img src="images/slide-27.jpg" alt="주사위 동영상"></span></label></p>
-<h2 id="fbx"><a class="header" href="#fbx">FBX</a></h2>
-<ul>
-<li><strong>FBX(FilmBoX)</strong>
-<ul>
-<li>3D 그래픽 자료 호환의 사실상 표준</li>
-<li>다른 프로그램으로 자료를 넘길 때 FBX로 export 한 파일을 넘겨준다</li>
-</ul>
-</li>
-</ul>
-<h2 id="실습-건물-만들기"><a class="header" href="#실습-건물-만들기">실습: 건물 만들기</a></h2>
-<ul>
-<li>건물은 직육면체를 활용</li>
-<li>텍스처는 <a href="https://pixabay.com">pixabay.com</a>에서 다운로드해 사용
-<ul>
-<li>검색어: <code>building facade</code></li>
-</ul>
-</li>
-</ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-29.jpg" alt="건물 만들기"><span class="img-wrapper"><img src="images/slide-29.jpg" alt="건물 만들기"></span></label></p>
-<p><strong>활용 기술</strong>: 3D 모델링, 조명, 재질, UV / 텍스처, 렌더링</p>
-<p><strong>과정 안내</strong>: <a href="https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-01.html">https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-01.html</a></p>
-<h2 id="실습-책상-만들기-1"><a class="header" href="#실습-책상-만들기-1">실습: 책상 만들기 1</a></h2>
-<ul>
-<li>mesh들을 조합하여 책상 만들기</li>
-<li>텍스처는 <a href="https://pixabay.com">pixabay.com</a>에서 다운로드해 사용
-<ul>
-<li>검색어: <code>wood texture</code></li>
-</ul>
-</li>
-</ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-31.jpg" alt="책상 만들기 1"><span class="img-wrapper"><img src="images/slide-31.jpg" alt="책상 만들기 1"></span></label></p>
-<p><strong>활용 기술</strong>: 3D 모델링, 조명, 재질, UV / 텍스처, 렌더링</p>
-<p><strong>과정 안내</strong>: <a href="https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-02.html">https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-02.html</a></p>
-<h2 id="실습-책상-만들기-2"><a class="header" href="#실습-책상-만들기-2">실습: 책상 만들기 2</a></h2>
-<ul>
-<li>Edit 모드를 이용해 1개의 mesh로 책상 만들기</li>
-<li>텍스처는 <a href="https://pixabay.com">pixabay.com</a>에서 다운로드해 사용
-<ul>
-<li>검색어: <code>wood texture</code></li>
-</ul>
-</li>
-</ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-33.jpg" alt="책상 만들기 2"><span class="img-wrapper"><img src="images/slide-33.jpg" alt="책상 만들기 2"></span></label></p>
-<p><strong>활용 기술</strong>: 3D 모델링, 조명, 재질, UV / 텍스처, 렌더링</p>
-<p><strong>과정 안내</strong>: <a href="https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-03.html">https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-03.html</a></p>
-<h2 id="실습-책상-만들기-3"><a class="header" href="#실습-책상-만들기-3">실습: 책상 만들기 3</a></h2>
-<ul>
-<li>하나의 mesh에 다양한 재질 입히기</li>
-</ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-35.jpg" alt="책상 만들기 3"><span class="img-wrapper"><img src="images/slide-35.jpg" alt="책상 만들기 3"></span></label></p>
-<p><strong>활용 기술</strong>: 재질</p>
-<p><strong>과정 안내</strong>: <a href="https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-04.html">https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-04.html</a></p>
-<h2 id="복습문제-2"><a class="header" href="#복습문제-2">복습문제 2</a></h2>
-<p><a href="https://profkim2000.github.io/board/3dgraphics/quiz/quiz-02.html">https://profkim2000.github.io/board/3dgraphics/quiz/quiz-02.html</a></p>
+<pre><code>웹에서 가볍게 보여주고 싶다             → glb
+Cesium에 도시 전체를 올리고 싶다        → glb → 3D Tiles 변환
+Unity/Unreal로 가져가야 한다           → fbx 또는 glb
+3D 프린팅이 목적이다                   → stl
+BIM · 속성 관리가 중요하다             → IFC, CityGML
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../01-geo3D/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="02-floorplan-3d.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../01-geo3D/1-2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -411,11 +532,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../01-geo3D/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="02-floorplan-3d.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../01-geo3D/1-2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>
@@ -435,13 +556,13 @@
         </script>
 
 
-        <script src="elasticlunr-ef4e11c1.min.js"></script>
-        <script src="mark-09e88c2c.min.js"></script>
-        <script src="searcher-09f2665d.js"></script>
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-09f2665d.js"></script>
 
-        <script src="clipboard-1626706a.min.js"></script>
-        <script src="highlight-abc7f01d.js"></script>
-        <script src="book-609e4cb8.js"></script>
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-abc7f01d.js"></script>
+        <script src="../book-609e4cb8.js"></script>
 
         <!-- Custom JS scripts -->
 

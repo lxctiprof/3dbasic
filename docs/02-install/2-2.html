@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Light - 3D 그래픽 기본</title>
+        <title>사용자 인터페이스 - 3D 그래픽 기본</title>
 
 
         <!-- Custom HTML head -->
@@ -12,34 +12,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="favicon-de23e50b.svg">
-        <link rel="shortcut icon" href="favicon-8114d1fc.png">
-        <link rel="stylesheet" href="css/variables-8adf115d.css">
-        <link rel="stylesheet" href="css/general-e96d0476.css">
-        <link rel="stylesheet" href="css/chrome-d279d366.css">
-        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-e96d0476.css">
+        <link rel="stylesheet" href="../css/chrome-d279d366.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="custom-df9bd67f.css">
+        <link rel="stylesheet" href="../custom-df9bd67f.css">
 
 
         <!-- Provide site root and default themes to javascript -->
         <script>
-            const path_to_root = "";
+            const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-ff539535.js";
+            window.path_to_searchindex_js = "../searchindex-58519906.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-7cbb4c44.js"></script>
+        <script src="../toc-58498ee7.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -106,7 +106,7 @@
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
             <noscript>
-                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
             </noscript>
             <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -141,7 +141,7 @@
                     <h1 class="menu-title">3D 그래픽 기본</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
                         </a>
 
@@ -175,52 +175,285 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="light"><a class="header" href="#light">Light</a></h1>
-<h2 id="light조명"><a class="header" href="#light조명">Light(조명)</a></h2>
+                        <h1 id="사용자-인터페이스"><a class="header" href="#사용자-인터페이스">사용자 인터페이스</a></h1>
+<h2 id="1-화면-구성"><a class="header" href="#1-화면-구성">1. 화면 구성</a></h2>
+<p><img src="../images/1-39.png" width="90%" height="90%"> <br></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>편집기</th><th>역할</th></tr>
+</thead>
+<tbody>
+<tr><td>상단 메뉴</td><td>새 파일 생성, 불러오기, 작업한 파일 저장, 내보내기</td></tr>
+<tr><td><strong>Workspace 탭</strong></td><td>작업별 화면 배치 (Modeling 탭을 주로 사용)</td></tr>
+<tr><td><strong>3D Viewport</strong></td><td>모델을 보고 편집하는 핵심 화면</td></tr>
+<tr><td><strong>Outliner</strong></td><td>장면 속 오브젝트를 계층(폴더)으로 관리, 보임/숨김</td></tr>
+<tr><td><strong>Properties</strong></td><td>선택 오브젝트의 위치·재질·모디파이어·렌더 설정</td></tr>
+<tr><td><strong>Timeline</strong></td><td>애니메이션 프레임</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>모든 영역의 경계는 드래그로 크기를 바꾸고, 영역 모서리를 끌어 분할/병합 가능</p>
+</blockquote>
+<h2 id="2-상단-메뉴-알아보기"><a class="header" href="#2-상단-메뉴-알아보기">2. 상단 메뉴 알아보기</a></h2>
 <ul>
-<li>빛을 이용해 밝기와 분위기 조정</li>
-<li>빛을 이용해 생기는 그림자는 현실감을 주는 중요한 요소</li>
-</ul>
-<h2 id="point-조명"><a class="header" href="#point-조명">point 조명</a></h2>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-56.jpg" alt="point 조명"><span class="img-wrapper"><img src="images/slide-56.jpg" alt="point 조명"></span></label></p>
+<li>
+<h3 id="blender-메뉴"><a class="header" href="#blender-메뉴">[Blender] 메뉴</a></h3>
 <ul>
-<li>전구 느낌의 조명</li>
-<li>조명이 있는 곳은 밝고 주변은 점점 어두워짐</li>
+<li>Splash Screen 창을 다시 실행하여 표시</li>
 </ul>
-<h2 id="sun-조명"><a class="header" href="#sun-조명">sun 조명</a></h2>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-57.jpg" alt="sun 조명"><span class="img-wrapper"><img src="images/slide-57.jpg" alt="sun 조명"></span></label></p>
+</li>
+<li>
+<h3 id="file-메뉴"><a class="header" href="#file-메뉴">[File] 메뉴</a></h3>
 <ul>
-<li>태양 느낌의 조명</li>
-<li>위치는 상관없고 방향만 중요</li>
-<li>화면 전체에 일정한 밝기 제공</li>
+<li>새로운 파일을 생성하거나 작업한 파일을 불러올 수 있으며, 작업을 저장하거나 외부 파일을 가져오거나 내보낼 수 있음</li>
 </ul>
-<h2 id="spot-조명"><a class="header" href="#spot-조명">Spot 조명</a></h2>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-58.jpg" alt="Spot 조명"><span class="img-wrapper"><img src="images/slide-58.jpg" alt="Spot 조명"></span></label></p>
+</li>
+<li>
+<h3 id="edit-메뉴"><a class="header" href="#edit-메뉴">[Edit] 메뉴</a></h3>
 <ul>
-<li>공연장 스포트라이트 느낌의 조명</li>
-<li>빛이 퍼지는 모양을 고깔 모양으로 그려볼 수 있다</li>
-<li>주목받는 대상을 강조하기 위해 사용</li>
+<li>작업 되돌리기 Undo와 이전 작업으로 되돌리기 Redo가 있으며 블렌더의 설정을 Preference를 통해 변경</li>
 </ul>
-<h2 id="area-조명"><a class="header" href="#area-조명">Area 조명</a></h2>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-59.jpg" alt="Area 조명"><span class="img-wrapper"><img src="images/slide-59.jpg" alt="Area 조명"></span></label></p>
+</li>
+<li>
+<h3 id="render-메뉴"><a class="header" href="#render-메뉴">[Render] 메뉴</a></h3>
 <ul>
-<li>창을 통해 들어오는 빛이나 TV, 모니터에서 퍼져 나오는 빛을 표현</li>
-<li>빛이 뒤로 퍼지지 않는다</li>
+<li>이미지를 렌더링 할 수 있는 Render Image와 애니메이션을 랜더링할 수 있는 Fender Animation을 실행할 수 있음</li>
 </ul>
-<h2 id="조명-실습"><a class="header" href="#조명-실습">조명 실습</a></h2>
-<p><strong>과정 안내</strong>: <a href="https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-07.html">https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-07.html</a></p>
-<h2 id="복습문제-3"><a class="header" href="#복습문제-3">복습문제 3</a></h2>
-<p><a href="https://profkim2000.github.io/board/3dgraphics/quiz/quiz-03.html">https://profkim2000.github.io/board/3dgraphics/quiz/quiz-03.html</a></p>
-
+</li>
+<li>
+<h3 id="window-메뉴"><a class="header" href="#window-메뉴">[Window] 메뉴</a></h3>
+<ul>
+<li>Workspace를 변경할 수 있으며, 새로운 창을 복제하여 생성할 수 있는 기능들이 있음</li>
+</ul>
+</li>
+<li>
+<h3 id="help-메뉴"><a class="header" href="#help-메뉴">[Help] 메뉴</a></h3>
+<ul>
+<li>공식 홈페이지에 있는 메뉴얼과 튜토리얼로 이동할 수 있음</li>
+</ul>
+</li>
+</ul>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>기능</th><th>조작</th></tr>
+</thead>
+<tbody>
+<tr><td>시작하기</td><td></td></tr>
+<tr><td>저장하기</td><td><code>Ctrl + S</code></td></tr>
+<tr><td>불러오기</td><td><code>Ctrl + O</code></td></tr>
+<tr><td>종료하기</td><td>’Ctrl + Q`</td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="3-인터페이스-변경하기"><a class="header" href="#3-인터페이스-변경하기">3. 인터페이스 변경하기</a></h2>
+<ul>
+<li>
+<h3 id="workspaces에서-인터페이스-변경하기"><a class="header" href="#workspaces에서-인터페이스-변경하기">Workspaces에서 인터페이스 변경하기</a></h3>
+<ul>
+<li>
+<p>기본적으로 <strong>다양한 3D 작업에 편리한 인터페이스를 기본으로 제공</strong>하며, 자신에게 적합한 인터페이스를 쉽게 맞춰서 사용 가능</p>
+<p><img src="../images/1-40.png" width="100%" height="100%"> <br></p>
+<p><img src="../images/1-41.png" width="100%" height="100%"> <br></p>
+  <img src="../images/1-42.png" width="100%" height="100%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="3d-viewport-패널-알아보기"><a class="header" href="#3d-viewport-패널-알아보기">3D Viewport 패널 알아보기</a></h3>
+<p><img src="../images/1-43.png" width="90%" height="90%"> <br></p>
+<ul>
+<li>
+<p>기본 구성 화면</p>
+<ul>
+<li>화면에 기본적으로 Cube 오브젝트, 조명(light), 카메라(camera)가 표기</li>
+</ul>
+</li>
+<li>
+<p>Header 패널</p>
+<ul>
+<li>해당 Mode에 필요한 기본 메뉴들이 배치</li>
+</ul>
+</li>
+<li>
+<p>Toolbar 패널([T])</p>
+<ul>
+<li>기본 Object Mode에 적합한 기능들이 표시</li>
+</ul>
+</li>
+<li>
+<p>Sidebar([N])</p>
+<ul>
+<li>선택한 오브젝트의 좌표와 크기 등의 정보를 확인하거나 수치를 입력해서 변경할 수 있으며 각각의 탭에도 다양한 정보들이 있음</li>
+</ul>
+</li>
+<li>
+<p>Navigator</p>
+<ul>
+<li>좌표 기즈모(Gizmo)와 확대, 화면 이동, 카메라와 투시를 변경할 수 있음</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="3d-viewport-패널-조작하기"><a class="header" href="#3d-viewport-패널-조작하기">3D Viewport 패널 조작하기</a></h3>
+<ul>
+<li>
+<p>패널 분할하기</p>
+<ul>
+<li>경계선에서 마우스 오른쪽 버튼을 클릭한 다음 표시되는 창에서 <b>[Vertical Split] 또는 [Horizonatal Split]</b>를 실행하면 수평 또는 수직 분할</li>
+</ul>
+</li>
+<li>
+<p>화면 합치기</p>
+<ul>
+<li>합칠 화면의 경계선에서 마우스 오른쪽 버튼을 클릭하여 <b>[Join Area]</b>를 실행</li>
+</ul>
+</li>
+<li>
+<p>Editor Type 변경하기</p>
+<ul>
+<li>
+<p>변경할 패널 상단에서 ‘Editor Type’ 아이콘을 클릭하면 다양한 Edior를 선택할 수 있는 창이 표시</p>
+  <img src="../images/1-44.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="기본-단축키-사용법"><a class="header" href="#기본-단축키-사용법">기본 단축키 사용법</a></h3>
+<ul>
+<li>
+<p>Screencast Keys 애드온 설치</p>
+  <img src="../images/1-45.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-뷰포트-조작"><a class="header" href="#4-뷰포트-조작">4. 뷰포트 조작</a></h2>
+<ul>
+<li>
+<h3 id="화면-회전orbiting"><a class="header" href="#화면-회전orbiting">화면 회전(Orbiting)</a></h3>
+<ul>
+<li>
+<p>3D Viewport 에디터 안에서 마우스 휠 클릭한 후 드래그 또는 기즈모(gizmo) 사용</p>
+</li>
+<li>
+<p>블렌더에서 축별 방향 기준은 <b>X축(왼쪽/오른쪽), Y축(정면/후면), Z축(위/아래)</b> 임</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>동작</th><th>조작</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>화면회전(1)</strong></td><td>휠 클릭 &amp; 드래그</td></tr>
+<tr><td><strong>화면회전(2)</strong></td><td>내비게이션 기즈모 마우스 왼쪽 클릭 &amp; 드래그</td></tr>
+<tr><td><strong>수직회전(1)</strong></td><td><code>Alt</code> + 휠 클릭 &amp; 드래그</td></tr>
+<tr><td><strong>수직회전(2)</strong></td><td>내비게이션 기즈모 마우스 왼쪽 클릭</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>마우스 왼쪽버튼: MLB, 마우스 오른쪽 버튼: MRB</p>
+</blockquote>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/50_u5w2K784?si=NCyPANPvzJh67QBH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<ul>
+<li>
+<h3 id="시점-전환-숫자패드---파이메뉴"><a class="header" href="#시점-전환-숫자패드---파이메뉴">시점 전환 (숫자패드 / <code>~</code> 파이메뉴)</a></h3>
+</li>
+</ul>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>키</th><th>시점</th></tr>
+</thead>
+<tbody>
+<tr><td><code>1</code></td><td>Front (앞)</td></tr>
+<tr><td><code>3</code></td><td>Right (오른쪽)</td></tr>
+<tr><td><code>7</code></td><td>Top (위)</td></tr>
+<tr><td><code>0</code></td><td>카메라 시점</td></tr>
+<tr><td><code>5</code></td><td>원근 ↔ 직교 전환</td></tr>
+<tr><td><code>Ctrl</code> + <code>1/3/7</code></td><td>반대편 시점 (Back/Left/Bottom)</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>숫자패드가 없는 노트북: <code>Edit &gt; Preferences &gt; Input &gt; Emulate Numpad</code> 체크 또는 뷰포트 우측 상단의 <strong>기즈모(축 아이콘)</strong> 를 클릭</p>
+</blockquote>
+<blockquote>
+<p>💡 모델링은 <strong>직교(Orthographic) 뷰</strong>에서 하면 비례가 정확함</p>
+</blockquote>
+<blockquote>
+<p>Perspective Projection(원근투영): 멀리 있는 객체는 작게, 가까이 있는 객체는 크게 보인
+Orthographic Progection(직교투영): 거리에 상관없이 모든 객체가 실제 크기 그대로 표시</p>
+</blockquote>
+<ul>
+<li>
+<h3 id="화면-확대-축소scalling"><a class="header" href="#화면-확대-축소scalling">화면 확대, 축소(Scalling)</a></h3>
+<ul>
+<li>
+<p>마우스 휠 또는 숫자키패드를 이용하여 화면 확대 및 축소</p>
+</li>
+<li>
+<p>오브젝트가 여러 개 있을 경우 영역을 선택하고, 설정된 영역에 대해 확대 및 축소 가능</p>
+</li>
+<li>
+<p><code>Shift</code> + <code>B</code>로 선택 기능을 활성화하고 마우스 왼쪽버튼으로 영역 선택</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>동작</th><th>조작</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>화면 확대</strong></td><td>휠 업 또는 숫자키패드 +</td></tr>
+<tr><td><strong>화면 축소</strong></td><td>휠 다운 또는 숫자키패드 -</td></tr>
+<tr><td><strong>부드럽게 확대 / 축소</strong></td><td><code>Ctrl</code> + 휠 클릭 &amp; 드래그</td></tr>
+<tr><td><strong>전체영역보기</strong></td><td><code>Home</code></td></tr>
+<tr><td><strong>선택한 오브젝트만 확대해서 보기</strong></td><td>숫자키패드 .</td></tr>
+<tr><td><strong>뷰 파이 메뉴 띄우기</strong></td><td><code>Esc</code> 키 아래에 있는 억음부호(`)</td></tr>
+</tbody>
+</table>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oib83G67iKA?si=T8KgnJ6Ku3z44NHw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<h2 id="5-화면-이동하기panning"><a class="header" href="#5-화면-이동하기panning">5. 화면 이동하기(Panning)</a></h2>
+<ul>
+<li>마우스 휠 또는 숫자 키패드를 이용하여 화면 이동</li>
+</ul>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>동작</th><th>조작</th></tr>
+</thead>
+<tbody>
+<tr><td>화면이동</td><td><code>Shift</code> + 휠 클릭 &amp; 드래그</td></tr>
+<tr><td>위로 조금씩 이동</td><td><code>Ctrl</code> + 숫자키패드 2</td></tr>
+<tr><td>오른쪽으로 조금씩 이동</td><td><code>Ctrl</code> + 숫자키패드 4</td></tr>
+<tr><td>왼쪽으로 조금씩 이동</td><td><code>Ctrl</code> + 숫자키패드 6</td></tr>
+<tr><td>아래쪽으로 조금씩 이동</td><td><code>Ctrl</code> + 숫자키패드 8</td></tr>
+</tbody>
+</table>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S3OKw1ArfyI?si=JSs39wGFWIjaFeK6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="03-material-texture.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../02-install/2-1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="05-render.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../02-install/2-3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -230,11 +463,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="03-material-texture.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../02-install/2-1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="05-render.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../02-install/2-3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>
@@ -254,13 +487,13 @@
         </script>
 
 
-        <script src="elasticlunr-ef4e11c1.min.js"></script>
-        <script src="mark-09e88c2c.min.js"></script>
-        <script src="searcher-09f2665d.js"></script>
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-09f2665d.js"></script>
 
-        <script src="clipboard-1626706a.min.js"></script>
-        <script src="highlight-abc7f01d.js"></script>
-        <script src="book-609e4cb8.js"></script>
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-abc7f01d.js"></script>
+        <script src="../book-609e4cb8.js"></script>
 
         <!-- Custom JS scripts -->
 

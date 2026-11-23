@@ -37,10 +37,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-ff539535.js";
+            window.path_to_searchindex_js = "searchindex-58519906.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-7cbb4c44.js"></script>
+        <script src="toc-58498ee7.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -176,17 +176,1235 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="3d-그래픽-기본"><a class="header" href="#3d-그래픽-기본">3D 그래픽 기본</a></h1>
-<p>2025</p>
-<p>Blender를 이용해 3D 그래픽의 기본 개념(좌표축, 모델링, 재질, 조명, 렌더링)을 배우고 실습합니다.</p>
-<h2 id="구성"><a class="header" href="#구성">구성</a></h2>
-<ol>
-<li><a href="#3d-모델링-이론-및-실습이론">3D 모델링 이론 및 실습이론</a></li>
-<li><a href="#도면-3d">도면 3D</a></li>
-<li><a href="#재질--texture">재질 &amp; texture</a></li>
-<li><a href="#light">Light</a></li>
-<li><a href="#render-실습">Render 실습</a></li>
-</ol>
+                        <h1 id="공간정보와-3d"><a class="header" href="#공간정보와-3d">공간정보와 3D</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="3차원-공간정보"><a class="header" href="#3차원-공간정보">3차원 공간정보</a></h1>
+<h2 id="1-3차원-공간정보의-개념"><a class="header" href="#1-3차원-공간정보의-개념">1. 3차원 공간정보의 개념</a></h2>
+<ul>
+<li>
+<h3 id="공간정보geospatial-information-개념"><a class="header" href="#공간정보geospatial-information-개념">공간정보(Geospatial Information) 개념</a></h3>
+<ul>
+<li>지상, 지하, 수상, 수중 등 공간 상에 존재하는 자연 또는 인공적인 객체에 대한 <strong>위치정보</strong> 및 이와 관련된 <strong>공간적 인지와 의사결정에 필요한 정보</strong>(공간정보산업 진흥법)<br><br>
+<img src="images/1-1.png" width="90%" height="90%"></li>
+</ul>
+</li>
+<li>
+<h3 id="2차원-공간정보의-한계"><a class="header" href="#2차원-공간정보의-한계">2차원 공간정보의 한계</a></h3>
+<ul>
+<li>지적도, 수치지형도, 도로망은 대부분 <strong>x, y 평면</strong> 위에 표현되지만 현실은 다음과 같은 문제가 있음
+<ul>
+<li>
+<p>건물의 <strong>높이 · 층수</strong>, 지하 공간, 육교 · 고가도로의 <strong>겹침</strong>을 표현하기 어려움</p>
+</li>
+<li>
+<p><strong>일조 · 조망 · 그림자 · 침수</strong> 같은 분석은 높이 정보가 없으면 불가능</p>
+</li>
+<li>
+<p>비전문가가 지도를 보고 <strong>직관적으로 이해</strong>하기 어려움</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="3차원-공간정보-개념"><a class="header" href="#3차원-공간정보-개념">3차원 공간정보 개념</a></h3>
+<ul>
+<li>
+<p>2차원의 공간정보에 <b>높이(심도) · 영상 · 속성 정보를 추가</b>하여 현실세계와 동일한 입체감과 질감을 가지도록 표현한 지리정보</p>
+  <img src="images/1-2.png" width="90%" height="90%">   
+</li>
+<li>
+<p>2차원 공간정보는 현실세계에 대해 점 · 선 · 면의 2차원 객체로 일반화함으로써 데이터 손실이 발생하여 현실세계에 대한 이해와 분석에 한계</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>항목</th><th>2D 표현</th><th>3D 표현</th></tr>
+</thead>
+<tbody>
+<tr><td>좌표</td><td>X, Y</td><td>X, Y, Z</td></tr>
+<tr><td>건물</td><td>외곽선</td><td>외곽선과 높이·지붕 형상</td></tr>
+<tr><td>도로</td><td>중심선 또는 면</td><td>폭 · 높이 · 경사 · 포장 구조</td></tr>
+<tr><td>지형</td><td>등고선 · 표고점 · DEM</td><td>표면 메시 또는 높이장</td></tr>
+<tr><td><br></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4OjqN57VVY?si=WvCn18Nlq_B1U-8H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>   
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-3차원-공간정보-활용"><a class="header" href="#2-3차원-공간정보-활용">2. 3차원 공간정보 활용</a></h2>
+<ul>
+<li>
+<h3 id="활용-분야"><a class="header" href="#활용-분야">활용 분야</a></h3>
+</li>
+</ul>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>분야</th><th>예시</th></tr>
+</thead>
+<tbody>
+<tr><td>도시계획</td><td>경관 · 조망 분석, 일조권 검토, 스카이라인 시뮬레이션</td></tr>
+<tr><td>방재</td><td>침수 시뮬레이션, 산사태 위험 지역 표현</td></tr>
+<tr><td>건설 · 시설물</td><td>BIM–GIS 연계, 지하 매설물 관리</td></tr>
+<tr><td>스마트시티 · 디지털트윈</td><td>도시 전체의 3D 모델에 센서 데이터 연동</td></tr>
+<tr><td>관광 · 문화재</td><td>3D 스캔한 문화재, 가상 투어</td></tr>
+<tr><td>게임 · 메타버스</td><td>실제 도시를 닮은 가상 공간</td></tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>
+<h3 id="lx플랫폼-개요"><a class="header" href="#lx플랫폼-개요">LX플랫폼 개요</a></h3>
+<ul>
+<li>
+<p>수요기관 독립 운영이 가능한 <strong>클라우드 인프라 및 개발환경 제공</strong>으로 차별화된 <strong>공간정보 기반 행정정보 활용</strong> 지원<br></p>
+  <img src="images/1-3.jpg" width="100%" height="100%">   
+</li>
+</ul>
+</li>
+<li>
+<h3 id="lx-플랫폼-서비스-구성-현황"><a class="header" href="#lx-플랫폼-서비스-구성-현황">LX 플랫폼 서비스 구성 현황</a></h3>
+  <img src="images/1-4.jpg" width="100%" height="100%">   
+</li>
+<li>
+<h3 id="lx플랫폼-공통기능-시연"><a class="header" href="#lx플랫폼-공통기능-시연">LX플랫폼 공통기능 시연</a></h3>
+  <img src="images/1-23.png" width="100%" height="100%">   
+  <iframe width="640" height="360" src="https://www.youtube.com/embed/kVF_m8Fmh-U?si=Zxrm1Eo_o6bd4kST" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</li>
+</ul>
+<h2 id="2-3차원-공간정보-구축"><a class="header" href="#2-3차원-공간정보-구축">2. 3차원 공간정보 구축</a></h2>
+<ul>
+<li>
+<h3 id="3차원-공간정보-자료원"><a class="header" href="#3차원-공간정보-자료원">3차원 공간정보 자료원</a></h3>
+<ul>
+<li>
+<p>3차원 지형</p>
+<ul>
+<li>항공레이저 촬영으로 현실세계 <strong>지형을 3차원</strong>으로 표현한 데이터</li>
+</ul>
+</li>
+<li>
+<p>정사영상</p>
+<ul>
+<li>3차원 공간정보에 활용되는 <strong>배경지도</strong>(항공사진 촬영을 통해 하늘에서 수직으로 촬영하여 제작한 영상)</li>
+</ul>
+</li>
+<li>
+<p>3차원 입체모형</p>
+<ul>
+<li>
+<p>건물, 도로 등의 시설물을 정밀 모델링하여 <strong>현실 세계와 동일</strong>하게 구축한 데이터</p>
+  <img src="images/1-5.png" width="100%" height="100%"> 
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="3차원-공간정보-구축방법"><a class="header" href="#3차원-공간정보-구축방법">3차원 공간정보 구축방법</a></h3>
+<ul>
+<li>
+<p>항공사진 촬영</p>
+<ul>
+<li>
+<p>실감정사영상 제작 및 3차원 가시화 모델을 제작하기 위해 <strong>일정한 중복도</strong>로 동서남북을 교차해 <strong>촬영</strong></p>
+  <img src="images/1-6.png" width="80%" height="80%"> 
+</li>
+</ul>
+</li>
+<li>
+<p>항공레이저 측량</p>
+<ul>
+<li>
+<p><strong>지표면의 높이값을 정밀 추출</strong>하기 위해 항공기에 라이다(LiDAR)를 부착하여 지형을 스캔, 3차원 지형데이터 정보(수치표고모형, Digital Elevation Model)를 취득</p>
+  <img src="images/1-7.png" width="80%" height="80%"> 
+</li>
+</ul>
+</li>
+<li>
+<p>3차원 가시화 모델</p>
+<ul>
+<li>
+<p>항공사진 및 수치표고모형 성과에서 건물 등의 구조물에 대해 실제 형상과 같은 <strong>3차원 가시화 모델</strong>을 제작</p>
+  <img src="images/1-8.png" width="80%" height="80%"> 
+</li>
+</ul>
+</li>
+<li>
+<p>실감정사영상</p>
+<ul>
+<li>
+<p>수치표고모형과 3차원 가시화 모델을 이용하여 지형 및 건물 구조물의 오류를 모두 제거한 <strong>고정밀 영상지도 제작</strong></p>
+  <img src="images/1-9.png" width="80%" height="80%"> 
+</li>
+</ul>
+</li>
+<li>
+<p>3차원 공간정보 구축</p>
+<ul>
+<li>
+<p>자동영상매칭 S/W를 활용하여 자동으로 <strong>실감정사영상, 수치표면모형 및 3차원 가시화 모델 제작</strong></p>
+  <img src="images/1-10.png" width="100%" height="100%"> 
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-공간정보의-기하-유형과-3d-객체"><a class="header" href="#3-공간정보의-기하-유형과-3d-객체">3. 공간정보의 기하 유형과 3D 객체</a></h2>
+<img src="images/1-11.png" width="100%" height="100%"> 
+<ul>
+<li>
+<h3 id="지형데이터"><a class="header" href="#지형데이터">지형데이터</a></h3>
+<ul>
+<li>
+<p><strong>고도 값이 입력</strong>된 바이너리(shp, dem 등), 아스키(dsf, asc 등), 이미지 파일(tiff, img)을 토대로 3차원 지형데이터로 생성</p>
+  <img src="images/1-12.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="영상-데이터"><a class="header" href="#영상-데이터">영상 데이터</a></h3>
+<ul>
+<li>
+<p>RGB 밴드가 포함된 이미지 파일(tiff, img 등)을 토대로 3차원 지형데이터에 영상을 생성</p>
+</li>
+<li>
+<p>주로 <strong>위성영상 혹은 항공사진</strong>을 이용하고, 생성의 개념보다는 지형에 덮어씌우는 개념</p>
+   <img src="images/1-13.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="다면체-데이터"><a class="header" href="#다면체-데이터">다면체 데이터</a></h3>
+<ul>
+<li>
+<p>2차원의 <strong>폴리곤 데이터에 높이 값을 적용</strong>하여 다면체 데이터로 생성</p>
+</li>
+<li>
+<p>수치지형도를 기반으로 건물데이터를 생성할 때 주로 사용</p>
+  <img src="images/1-14.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="평면-데이터"><a class="header" href="#평면-데이터">평면 데이터</a></h3>
+<ul>
+<li>
+<p>2차원의 <strong>폴리곤 데이터에 높이 값을 적용하지 않고, 지형의 굴곡</strong>에 맞춰 표출</p>
+</li>
+<li>
+<p>주로 도로, 인도 등의 높이가 없다고 판단되는 데이터 표출에 사용</p>
+  <img src="images/1-15.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="라인-데이터"><a class="header" href="#라인-데이터">라인 데이터</a></h3>
+<ul>
+<li>
+<p>2차원의 <strong>라인 데이터를 높이 값을 지정하지 않고, 지형의 굴곡</strong>에 맞춰 표출</p>
+</li>
+<li>
+<p>주로 경계선(행정경계 등) 데이터 표출에 사용</p>
+  <img src="images/1-16.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="파이프-데이터"><a class="header" href="#파이프-데이터">파이프 데이터</a></h3>
+<ul>
+<li>
+<p>2차원의 <strong>라인 데이터에 두께 및 높이 값을 적용</strong>하여 파이프 형태의 데이터 표출</p>
+</li>
+<li>
+<p>주로 지하시설물(상수관, 하수관 등) 데이터 표출에 사용</p>
+  <img src="images/1-17.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="빌보드-데이터"><a class="header" href="#빌보드-데이터">빌보드 데이터</a></h3>
+<ul>
+<li>
+<p>2차원의 포인트 데이터를 기준으로 <strong>연속적으로 동일한 이미지를 적용</strong>하여 효출</p>
+</li>
+<li>
+<p>주로 가로수 표현에 적용</p>
+  <img src="images/1-18.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="모델링-데이터"><a class="header" href="#모델링-데이터">모델링 데이터</a></h3>
+<ul>
+<li>
+<p>그래픽 도구로 디테일하게 만든 <strong>모델링 데이터를 표출</strong>하는데 사용</p>
+</li>
+<li>
+<p>랜드마크선 시설물(63빌딩, 남산타워 등)을 표출하는데 사용</p>
+  <img src="images/1-19.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="poipoint-of-interests"><a class="header" href="#poipoint-of-interests">POI(Point of Interests)</a></h3>
+<ul>
+<li>
+<p>2차원의 <b>포인트 데이터를 기준으로 아이콘(이미지) 및 텍스트</b> 표출</p>
+</li>
+<li>
+<p>주로 명칭 표출에 사용</p>
+  <img src="images/1-20.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-3차원-데이터-표출기법"><a class="header" href="#4-3차원-데이터-표출기법">4. 3차원 데이터 표출기법</a></h2>
+<ul>
+<li>
+<h3 id="lodlevel-of-detail"><a class="header" href="#lodlevel-of-detail">LOD(Level of Detail)</a></h3>
+<ul>
+<li>
+<p>“멀리 있는 물체는 잘 보이지 않는다“는 생각을 바탕으로 개발된 모델로 3차원 GIS 데이터를 <strong>보다 효율적이고 빠른 속도로 가시화</strong>하기 위해 적용하는 기술</p>
+</li>
+<li>
+<p>사용자 시점으로부터 거리에 따라 지형, 영상, 3차원 객체의 <strong>정밀도와 해상도를 단계적으로 표현</strong>하는 기술</p>
+  <img src="images/1-21.png" width="100%" height="100%"> 
+  <img src="images/1-22.png" width="100%" height="100%"> 
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-3차원-데이터-저장형식"><a class="header" href="#5-3차원-데이터-저장형식">5. 3차원 데이터 저장형식</a></h2>
+<ul>
+<li>
+<h3 id="주요-3d-파일-포맷"><a class="header" href="#주요-3d-파일-포맷">주요 3D 파일 포맷</a></h3>
+</li>
+</ul>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>포맷</th><th>확장자</th><th>특징</th><th>용도</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>glTF / GLB</strong></td><td>.gltf / .glb</td><td>웹용 표준, 용량 작음, 재질·텍스처·애니메이션 포함 (“3D의 JPEG”)</td><td><strong>WebGIS, 웹 3D</strong></td></tr>
+<tr><td>OBJ</td><td>.obj (+.mtl)</td><td>단순·범용, 텍스트 기반, 애니메이션 없음</td><td>교환</td></tr>
+<tr><td>FBX</td><td>.fbx</td><td>애니메이션 포함, 게임 엔진</td><td>Unity, Unreal</td></tr>
+<tr><td>STL</td><td>.stl</td><td>형상만(색·재질 없음)</td><td>3D 프린팅</td></tr>
+<tr><td>Blender</td><td>.blend</td><td>Blender 원본(모든 정보 보존)</td><td>작업 원본</td></tr>
+<tr><td>IFC</td><td>.ifc</td><td>BIM 표준</td><td>건축</td></tr>
+<tr><td>CityGML</td><td>.gml</td><td><strong>속성 + 구조</strong> 가진 도시 모델 국제 표준</td><td>공간정보</td></tr>
+<tr><td>3D Tiles</td><td>tileset.json + .b3dm/.glb</td><td>Cesium 대용량 스트리밍</td><td>도시 전체</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>✅ <strong>작업 원칙</strong>: 원본은 <code>.blend</code>로 저장하고, 배포용은 <code>.glb</code>로 내보냄</p>
+</blockquote>
+<ul>
+<li>
+<h3 id="포맷-선택-기준"><a class="header" href="#포맷-선택-기준">포맷 선택 기준</a></h3>
+</li>
+</ul>
+<pre><code>웹에서 가볍게 보여주고 싶다             → glb
+Cesium에 도시 전체를 올리고 싶다        → glb → 3D Tiles 변환
+Unity/Unreal로 가져가야 한다           → fbx 또는 glb
+3D 프린팅이 목적이다                   → stl
+BIM · 속성 관리가 중요하다             → IFC, CityGML
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="3차원-모델링"><a class="header" href="#3차원-모델링">3차원 모델링</a></h1>
+<h2 id="1-3차원-모델링-개요"><a class="header" href="#1-3차원-모델링-개요">1. 3차원 모델링 개요</a></h2>
+<ul>
+<li>
+<h3 id="3차원-모델링-개념"><a class="header" href="#3차원-모델링-개념">3차원 모델링 개념</a></h3>
+<ul>
+<li>
+<p>컴퓨터 그래픽스 분야의 경우 <strong>3차원 전문 소프트웨어를 사용하여 3D 개체를 제작</strong>하는 과정</p>
+</li>
+<li>
+<p>가상공간의 입체적인 모델을 통해 실세계의 물체를 묘사하거나 혹은 물리적 환경을 만들어 가상 환경 속에서 물체 모습을 생성</p>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="3차원-모델링-기술의-특징"><a class="header" href="#3차원-모델링-기술의-특징">3차원 모델링 기술의 특징</a></h3>
+<ul>
+<li>
+<p>모델의 자유로운 수정</p>
+<ul>
+<li><strong>모델을 자유롭게 수정하고 조정</strong>할 수 있어 디자인 프로세스의 유연성을 높여주고, 아이디어를 자유롭게 시도하고 실험할 수 있게 함</li>
+</ul>
+</li>
+<li>
+<p>정밀한 모델링</p>
+<ul>
+<li><strong>높은 정밀도로 모델이 생성 가능</strong>하여 제품 디자인이나 건축 모델링과 같이 정확한 치수 또는 세부 사항이 중요한 분야에서 매우 유용</li>
+</ul>
+</li>
+<li>
+<p>다양한 표현 방식</p>
+<ul>
+<li>외관 표현, 와이어프레임, 색상 및 텍스처, 랜더링 등 <strong>다양한 표현 방식을 통해 시각화</strong> 가능</li>
+</ul>
+</li>
+<li>
+<p>애니메이션과 상호작용</p>
+<ul>
+<li>움직임과 상호작용을 통해 <strong>더 생동감 있게</strong> 만들 수 있어 애니메이션, 시뮬레이션, 가상 현실 및 게임 개발 같은 분야에서 중요한 요소가 됨</li>
+</ul>
+</li>
+<li>
+<p>다양한 응용분야</p>
+<ul>
+<li><strong>영화와 게임 산업</strong>에서는 시각 효과와 가상 세계의 구축에 사용되며, *건축 및 제조업**에서는 제품 디자인 및 시뮬레이션에 활용</li>
+</ul>
+</li>
+<li>
+<p>실시간 시각화</p>
+<ul>
+<li>3차원 모델링 소프트웨어는 <strong>실시간을 모델을 조작하고 시각화</strong>할 수 있는 기능 제공</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="3차원-모델링의-작동-방식"><a class="header" href="#3차원-모델링의-작동-방식">3차원 모델링의 작동 방식</a></h3>
+  <img src="images/1-24.png" width="100%" height="100%"> 
+</li>
+</ul>
+<h2 id="2-3차원-형상-표현-기법"><a class="header" href="#2-3차원-형상-표현-기법">2. 3차원 형상 표현 기법</a></h2>
+<ul>
+<li>
+<h3 id="와이어-프레임-모델링wire-frame-modeling"><a class="header" href="#와이어-프레임-모델링wire-frame-modeling">와이어 프레임 모델링(Wire Frame Modeling)</a></h3>
+<ul>
+<li>
+<p>1960년대 처음으로 발견된 방식으로 직선, 점, 호 등의 기본적인 기하학적 요소로 마치 <strong>철사를 연결한 구조물과 같이 모델링</strong></p>
+</li>
+<li>
+<p><strong>소요시간이 적게 들고 차지하는 메모리의 용량이 적기</strong> 때문에 주로 2차원 도면 출력을 위한 평면 가공과 용도에 적합한 방식</p>
+</li>
+<li>
+<p>경계 정보나 부피와 같은 <strong>물리적 정보를 계산할 수 없고, 실체감이 없어</strong> 형상을 정확하게 파악하기 힘듦</p>
+  <img src="images/1-25.png" width="50%" height="50%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="서페이스-모델링surface-modeling"><a class="header" href="#서페이스-모델링surface-modeling">서페이스 모델링(Surface Modeling)</a></h3>
+<ul>
+<li>
+<p><strong>면을 이용해서 물체를 모델링</strong>하는 방법으로 표면 모델링이 정교함</p>
+</li>
+<li>
+<p>기하 곡면을 처리하는 기법으로 <strong>정교한 곡선 표면</strong>이 필요한 자동차, 항공, 조선 산업 등에서 필요</p>
+</li>
+<li>
+<p>컴퓨터의 속도와 메모리 용량을 적게 쓰고 주로 렌더링을 하기 위한 목적이나 애니메이션 등의 화면용으로 데이터를 출력하는 용도로 사용</p>
+</li>
+<li>
+<p><strong>물리적 성질을 계산할 수 없고, 물체 내부의 정보가 없음</strong></p>
+  <img src="images/1-26.png" width="50%" height="50%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="솔리드-모델링solid-modeling"><a class="header" href="#솔리드-모델링solid-modeling">솔리드 모델링(Solid Modeling)</a></h3>
+<ul>
+<li>
+<p>가장 진보적인 방식으로 <strong>3차원 형상의 표면</strong> 뿐만 아니라 내부의 질량, 체적, 부피 등 <strong>여러 정보</strong>가 담겨 있으며, 점, 선, 면의 집합체로 되어 있음</p>
+</li>
+<li>
+<p><strong>물체의 정확한 모델링과 분석</strong>이 필요한 다양한 분야에서 중요한 역할을 하며, 제품 개발과 시뮬레이션 작업을 지원하는데 사용</p>
+</li>
+<li>
+<p>정확한 기하학적 모델링이 가능하나, <strong>데이터 구조가 복잡</strong>해 고사양 컴퓨터를 필요로 하고 작업을 위한 필요 데이터량이 많음</p>
+  <img src="images/1-27.png" width="50%" height="50%"> 
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3차원-모델링-기술"><a class="header" href="#3-3차원-모델링-기술">3. 3차원 모델링 기술</a></h2>
+<ul>
+<li>
+<h3 id="폴리곤-모델링polygonal-modeling"><a class="header" href="#폴리곤-모델링polygonal-modeling">폴리곤 모델링(Polygonal Modeling)</a></h3>
+<ul>
+<li>
+<p>가장 전통적인 방식으로 삼각형 또는 사각형의 폴리곤을 구성하는 <b>점, 선, 면의 집합으로 메쉬(mesh)를 제작</b>하는 방식</p>
+</li>
+<li>
+<p><strong>쉽고 직관적이며 표면을 추가하거나 변형하기 쉽다</strong>는 장점이 있지만 곡선 표현이 부족하여 <b>엘리어싱(Aliasing) 현상</b> 발생</p>
+  <img src="images/1-28.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="넙스-모델링nurbs-modeling"><a class="header" href="#넙스-모델링nurbs-modeling">넙스 모델링(Nurbs Modeling)</a></h3>
+<ul>
+<li>
+<p>비정형 유리 B-스플라인(Non-Uniform Rational B-spline)의 약자로 <strong>폴리곤의 단점을 보완</strong>하기 위해 만들어진 기술로 정밀한 표현 가능</p>
+</li>
+<li>
+<p>수학적으로 <b>선(Curve)을 그려 형태를 잡고 그 형태의 선들을 이용해 면을 구현</b>하는 방식</p>
+  <img src="images/1-29.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="스컬프팅-모델링sculpting-modeling"><a class="header" href="#스컬프팅-모델링sculpting-modeling">스컬프팅 모델링(Sculpting Modeling)</a></h3>
+<ul>
+<li>
+<p><strong>디지털로 모델을 조각하거나 형성</strong>하는 기술로 3차원 모델링 소프트웨어를 사용하여 고해상도 모델을 생성</p>
+</li>
+<li>
+<p><strong>자연스러운 형태</strong>와 디테일을 쉽게 추가할 수 있으며 <strong>고해상도 모델링</strong>에 적합</p>
+</li>
+<li>
+<p>학습 곡선이 높고 복잡한 모델링에는 시간이 많이 소요됨</p>
+  <img src="images/1-30.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="모션캡쳐motion-capture"><a class="header" href="#모션캡쳐motion-capture">모션캡쳐(Motion Capture)</a></h3>
+<p>-** 실제 움직임을 디지털 환경으로 전송**하기 위해 사용되는 기술로 센서를 사용하여 인간 또는 동물의 움직임을 기록하고 3차원 모델에 적용 가능</p>
+<ul>
+<li>
+<p>실제 움직임을 자연스럽게 적용할 수 있으며 <strong>높은 리얼리즘과 효율성</strong>을 제공</p>
+</li>
+<li>
+<p><strong>모션 캡쳐 장비의 비용과 복잡성</strong>이 있으며 일부 움직임이 정확하게 캡쳐되지 않을 수 있음</p>
+  <img src="images/1-31.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="사진측량photogrammetry"><a class="header" href="#사진측량photogrammetry">사진측량(Photogrammetry)</a></h3>
+<ul>
+<li>
+<p><strong>여러 각도에서 촬영된 사진을 분석</strong>하여 객체의 형태와 표면을 재구성</p>
+</li>
+<li>
+<p>현실 세계의 정확한 모델을 생성할 수 있으며, <strong>비교적 저렴한 장비와 소프트웨어를 사용</strong>하여 구현 가능</p>
+</li>
+<li>
+<p>처리 시간이 오래 걸리고, 특정한 조명과 환경에 민감</p>
+  <img src="images/1-32.png" width="100%" height="100%"> 
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-랜더링rendering-텍스처링texturing-라이팅lighting"><a class="header" href="#4-랜더링rendering-텍스처링texturing-라이팅lighting">4. 랜더링(Rendering), 텍스처링(Texturing), 라이팅(Lighting)</a></h2>
+<ul>
+<li>
+<h3 id="랜더링"><a class="header" href="#랜더링">랜더링</a></h3>
+<ul>
+<li>
+<p>3차원 장면을 바탕으로 컴퓨터를 이용해 <strong>사진이나 영상을 만들어내는 과정</strong> 또는 그러한 기법</p>
+</li>
+<li>
+<p>3차원 모델에 <strong>질감</strong>을 입히고 <strong>여러 광학 효과</strong>를 가미하는 과정</p>
+<ul>
+<li>색상, 사실성, 음영, 형태 표현, 재질 등의 여러 요소가 고려</li>
+</ul>
+</li>
+<li>
+<p>아키텍처, 디자인 시각화 등 각각의 분야에 따라 서로 다른 기능 및 기술을 활용</p>
+  <img src="images/1-33.png" width="100%" height="100%"> 
+</li>
+</ul>
+<blockquote>
+<p>3차원 렌더링과 3차원 시각화를 혼용되어 사용되기도 하지만, 3차원 렌더링은 사실 3차원 시각화 프로세스의 마지막 단계임</p>
+</blockquote>
+</li>
+<li>
+<h3 id="텍스쳐링"><a class="header" href="#텍스쳐링">텍스쳐링</a></h3>
+<ul>
+<li>3차원 개체에 <strong>이미지, 패턴 및 표면 특성을 적용하는 과정</strong>으로 텍스처를 조작하여 거칠기(roughness), 광택(specular), 투명도(opacity) 등의 속성을 제작
+<ul>
+<li>
+<p>수동으로 텍스처를 칠하고 생성하는 방법</p>
+</li>
+<li>
+<p>실제 재질을 스캔하여 텍스처로 변환하는 방법</p>
+</li>
+<li>
+<p>컴퓨터 알고리즘이 텍스처를 자동으로 생성하도록 하는 절차적 생성 방법</p>
+   <img src="images/1-34.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="라이트닝"><a class="header" href="#라이트닝">라이트닝</a></h3>
+<ul>
+<li>
+<p>장면을 가시화하는 것뿐만 아니라 재질이 정확하게 표시되게 하려면 <strong>조명</strong>이 필요</p>
+</li>
+<li>
+<p>빛이 표면과 상호하는 매개변수로 조정하고, 조명이 잘못되면 모델의 모양도 이상해짐</p>
+   <img src="images/1-35.png" width="100%" height="100%"> 
+</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="blender-설치-및-활용"><a class="header" href="#blender-설치-및-활용">Blender 설치 및 활용</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="3차원-모델링-관련-프로그램"><a class="header" href="#3차원-모델링-관련-프로그램">3차원 모델링 관련 프로그램</a></h1>
+<h2 id="1-3차원-모델링-관련-프로그램"><a class="header" href="#1-3차원-모델링-관련-프로그램">1. 3차원 모델링 관련 프로그램</a></h2>
+<ul>
+<li>
+<h3 id="프로그램-종류"><a class="header" href="#프로그램-종류">프로그램 종류</a></h3>
+  <img src="images/1-36.png" width="90%" height="90%"> 
+</li>
+<li>
+<h3 id="blender-프로그램"><a class="header" href="#blender-프로그램">Blender 프로그램</a></h3>
+<ul>
+<li>
+<p><strong>무료 오픈소스 3차원 컴퓨터 그래픽 제작 소프트웨어</strong>로 다양한 기능과 도구를 제공</p>
+</li>
+<li>
+<p>3차원 모델링, 애니메이션, 렌더링, 시뮬레이션 등 다양한 작업을 지원</p>
+</li>
+<li>
+<p><strong>36개 언어 지원, 유연한 OpenGL 기반 인터페이스, 잦은 업데이트</strong>가 장점</p>
+</li>
+<li>
+<p>커뮤니티에서 다양한 자료 및 지원 제공</p>
+</li>
+<li>
+<p>사용자 인터페이스가 다른 프로그램과 비교하여 다소 낯설다는 단점</p>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="blender로-할-수-있는-일"><a class="header" href="#blender로-할-수-있는-일">Blender로 할 수 있는 일</a></h3>
+<ul>
+<li>
+<p>3D 모델링(modeling)</p>
+<ul>
+<li>원하는 모든 입체 형태를 자유롭게 빚고 디자인 가능(폴리곤, 스플라인)</li>
+</ul>
+</li>
+<li>
+<p>렌더링(rendering)</p>
+<ul>
+<li>3D 물체를 사진처럼 2차원에 담아내는 작업</li>
+</ul>
+</li>
+<li>
+<p>스컬팅(sculpting)</p>
+<ul>
+<li>점토로 물체를 만드는 것처럼 굴곡을 만들어나가는 조각 기능</li>
+</ul>
+</li>
+<li>
+<p>애니메이션(animation)</p>
+<ul>
+<li>뼈대를 심고(리깅) 움직임을 주어 캐릭터나 사물이 걷거나 뛰는 등 살아 움직이는 애니메이션 생성</li>
+</ul>
+</li>
+<li>
+<p>시뮬레이션(simulation)</p>
+<ul>
+<li>물, 불, 연기, 옷의 펄럭임, 부서지는 효과 등 물리 법칙을 적용한 자연스러운 움직임 구현</li>
+</ul>
+</li>
+<li>
+<p>영상 편집 및 합성</p>
+<ul>
+<li>외부 프로그램 없이도 컷 편집, 자막 추가, 효과음 및 영상 속 특수효과(VFX) 합성</li>
+</ul>
+</li>
+<li>
+<p>3D 프린팅 파일 제작</p>
+<ul>
+<li>실제로 출력할 수 있는 3D 모형 파일 제작 가능</li>
+</ul>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/N-aOsxjBTF8?si=MZeFyGFzOVSnw7q4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="blender-활용-분야"><a class="header" href="#blender-활용-분야">Blender 활용 분야</a></h3>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/uf3ALGKgpGU?si=I08VnVHdY-1D6xI2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</li>
+</ul>
+<h2 id="2-blender-설치"><a class="header" href="#2-blender-설치">2. Blender 설치</a></h2>
+<ul>
+<li>
+<h3 id="시스템-요구사항"><a class="header" href="#시스템-요구사항">시스템 요구사항</a></h3>
+<ul>
+<li>
+<p>그래픽 드라이버가 최신 상태인지 OpenGL이 잘 지원되는지 확인 필요</p>
+  <img src="images/1-37.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="버전별-특징"><a class="header" href="#버전별-특징">버전별 특징</a></h3>
+<ul>
+<li>
+<p>안정화된 릴리즈(Stable Release)</p>
+<ul>
+<li>최신 기능을 포함하고 있는 버전으로 <strong>3개월 간격으로 업데이트</strong>된 버전을 제공</li>
+</ul>
+</li>
+<li>
+<p>LTS(Long Term Release)</p>
+<ul>
+<li><strong>장기적인 안정성과 호환성을 중시</strong>하는 사용자를 위한 버전으로 <strong>2년 간의 장기 지원</strong>을 제공하여 기업이나 장기 프로젝트에 이상적</li>
+</ul>
+</li>
+<li>
+<p>데일리 빌드(Daily Builds)</p>
+<ul>
+<li>개발 변경사항들을 가장 발빠르게 적용하여 <strong>매일 업데이트 되는 패키지</strong>로 철저하게 테스트되지는 않았기 때문에 다소 오류가 포함될 수 있음</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="프로그램-설치"><a class="header" href="#프로그램-설치">프로그램 설치</a></h3>
+<ul>
+<li>
+<p>블렌더 공식 사이트(<b>https://www.blender.org</b>)로 접속한 후, <strong>Download 버튼</strong> 클릭</p>
+</li>
+<li>
+<p>화면 중간에 있는 <strong>Download Blender 버튼</strong> 클릭</p>
+<ul>
+<li>macOS, Linux, and other versions 버튼을 클릭하면 운영 체제에 맞는 프로그램 선택해서 다운로드 가능</li>
+</ul>
+</li>
+<li>
+<p>다운로드 받은 파일을 더블클릭하여 실행하고, 별다른 특이사항 없이 <strong>기본 옵션</strong>으로 다음(Next) 버튼 클릭하여 설치</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-blender-실행"><a class="header" href="#3-blender-실행">3. Blender 실행</a></h2>
+<ul>
+<li>
+<h3 id="스플래쉬-스크린splash-screen"><a class="header" href="#스플래쉬-스크린splash-screen">스플래쉬 스크린(Splash Screen)</a></h3>
+<ul>
+<li>
+<p>블렌더를 실행하면 항상 나타나는 <strong>대문 화면</strong>으로 버전별 대표 작품과 함께 다양한 항목이 표시</p>
+</li>
+<li>
+<p>화면을 클릭하면 사라지고, 메뉴에서 <b>[Blender] &gt; [Splash Screen]</b>을 실행하여 다시 표기 가능</p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/tKfwZhUR_SI?si=effzQCJLgiL-o3bG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="옵션-구성"><a class="header" href="#옵션-구성">옵션 구성</a></h3>
+<ul>
+<li>
+<p>New File: 기본화면, 애니메이션, 스컬핑, 시각효과, 영상편집 등 <strong>원하는 환경으로 새로운 파일을 생성</strong></p>
+</li>
+<li>
+<p>Open: 원하는 블렌더 파일을 <strong>불러오기</strong></p>
+  <img src="images/1-38.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-blender-설정"><a class="header" href="#4-blender-설정">4. Blender 설정</a></h2>
+<ul>
+<li>
+<h3 id="초기-설정-preferences"><a class="header" href="#초기-설정-preferences">초기 설정 (Preferences)</a></h3>
+<ul>
+<li>메뉴: <code>Edit &gt; Preferences</code></li>
+</ul>
+</li>
+</ul>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>항목</th><th>설정</th><th>이유</th></tr>
+</thead>
+<tbody>
+<tr><td>Interface &gt; Resolution Scale</td><td>화면에 맞게 1.0~1.25</td><td>글자 크기</td></tr>
+<tr><td>Interface &gt; Translation</td><td><strong>English 권장</strong></td><td>단축키·메뉴명이 자료/검색 결과와 일치</td></tr>
+<tr><td>Input &gt; Emulate 3 Button Mouse</td><td>터치패드/2버튼 사용 시 체크</td><td>휠 클릭 대체 (Alt + 좌클릭)</td></tr>
+<tr><td>Input &gt; Keymap</td><td>Blender (기본)</td><td>교재와 동일</td></tr>
+<tr><td>Save &amp; Load &gt; Auto Save</td><td>2분 간격</td><td>비정상 종료 대비</td></tr>
+<tr><td>System &gt; Memory &amp; Limits &gt; Undo Steps</td><td>64 이상</td><td>실수 되돌리기</td></tr>
+<tr><td>Add-ons</td><td><code>Import-Export: glTF 2.0</code> 활성화 확인</td><td>3장 내보내기</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>설정은 좌측 하단 <strong>Save Preferences</strong> 로 저장(자동 저장 켜짐이 기본)</p>
+</blockquote>
+<ul>
+<li>
+<h3 id="단위-설정-공간정보-필수"><a class="header" href="#단위-설정-공간정보-필수">단위 설정 (공간정보 필수)</a></h3>
+<ul>
+<li>
+<p>우측 <strong>Properties 편집기 &gt; Scene (원뿔과 구 아이콘)</strong> 탭</p>
+</li>
+<li>
+<p><strong>Units</strong>: Unit System = <strong>Metric</strong>, Unit Scale = <strong>1.0</strong>, Length = <strong>Meters</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="사용자-인터페이스"><a class="header" href="#사용자-인터페이스">사용자 인터페이스</a></h1>
+<h2 id="1-화면-구성"><a class="header" href="#1-화면-구성">1. 화면 구성</a></h2>
+<p><img src="images/1-39.png" width="90%" height="90%"> <br></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>편집기</th><th>역할</th></tr>
+</thead>
+<tbody>
+<tr><td>상단 메뉴</td><td>새 파일 생성, 불러오기, 작업한 파일 저장, 내보내기</td></tr>
+<tr><td><strong>Workspace 탭</strong></td><td>작업별 화면 배치 (Modeling 탭을 주로 사용)</td></tr>
+<tr><td><strong>3D Viewport</strong></td><td>모델을 보고 편집하는 핵심 화면</td></tr>
+<tr><td><strong>Outliner</strong></td><td>장면 속 오브젝트를 계층(폴더)으로 관리, 보임/숨김</td></tr>
+<tr><td><strong>Properties</strong></td><td>선택 오브젝트의 위치·재질·모디파이어·렌더 설정</td></tr>
+<tr><td><strong>Timeline</strong></td><td>애니메이션 프레임</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>모든 영역의 경계는 드래그로 크기를 바꾸고, 영역 모서리를 끌어 분할/병합 가능</p>
+</blockquote>
+<h2 id="2-상단-메뉴-알아보기"><a class="header" href="#2-상단-메뉴-알아보기">2. 상단 메뉴 알아보기</a></h2>
+<ul>
+<li>
+<h3 id="blender-메뉴"><a class="header" href="#blender-메뉴">[Blender] 메뉴</a></h3>
+<ul>
+<li>Splash Screen 창을 다시 실행하여 표시</li>
+</ul>
+</li>
+<li>
+<h3 id="file-메뉴"><a class="header" href="#file-메뉴">[File] 메뉴</a></h3>
+<ul>
+<li>새로운 파일을 생성하거나 작업한 파일을 불러올 수 있으며, 작업을 저장하거나 외부 파일을 가져오거나 내보낼 수 있음</li>
+</ul>
+</li>
+<li>
+<h3 id="edit-메뉴"><a class="header" href="#edit-메뉴">[Edit] 메뉴</a></h3>
+<ul>
+<li>작업 되돌리기 Undo와 이전 작업으로 되돌리기 Redo가 있으며 블렌더의 설정을 Preference를 통해 변경</li>
+</ul>
+</li>
+<li>
+<h3 id="render-메뉴"><a class="header" href="#render-메뉴">[Render] 메뉴</a></h3>
+<ul>
+<li>이미지를 렌더링 할 수 있는 Render Image와 애니메이션을 랜더링할 수 있는 Fender Animation을 실행할 수 있음</li>
+</ul>
+</li>
+<li>
+<h3 id="window-메뉴"><a class="header" href="#window-메뉴">[Window] 메뉴</a></h3>
+<ul>
+<li>Workspace를 변경할 수 있으며, 새로운 창을 복제하여 생성할 수 있는 기능들이 있음</li>
+</ul>
+</li>
+<li>
+<h3 id="help-메뉴"><a class="header" href="#help-메뉴">[Help] 메뉴</a></h3>
+<ul>
+<li>공식 홈페이지에 있는 메뉴얼과 튜토리얼로 이동할 수 있음</li>
+</ul>
+</li>
+</ul>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>기능</th><th>조작</th></tr>
+</thead>
+<tbody>
+<tr><td>시작하기</td><td></td></tr>
+<tr><td>저장하기</td><td><code>Ctrl + S</code></td></tr>
+<tr><td>불러오기</td><td><code>Ctrl + O</code></td></tr>
+<tr><td>종료하기</td><td>’Ctrl + Q`</td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="3-인터페이스-변경하기"><a class="header" href="#3-인터페이스-변경하기">3. 인터페이스 변경하기</a></h2>
+<ul>
+<li>
+<h3 id="workspaces에서-인터페이스-변경하기"><a class="header" href="#workspaces에서-인터페이스-변경하기">Workspaces에서 인터페이스 변경하기</a></h3>
+<ul>
+<li>
+<p>기본적으로 <strong>다양한 3D 작업에 편리한 인터페이스를 기본으로 제공</strong>하며, 자신에게 적합한 인터페이스를 쉽게 맞춰서 사용 가능</p>
+<p><img src="images/1-40.png" width="100%" height="100%"> <br></p>
+<p><img src="images/1-41.png" width="100%" height="100%"> <br></p>
+  <img src="images/1-42.png" width="100%" height="100%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="3d-viewport-패널-알아보기"><a class="header" href="#3d-viewport-패널-알아보기">3D Viewport 패널 알아보기</a></h3>
+<p><img src="images/1-43.png" width="90%" height="90%"> <br></p>
+<ul>
+<li>
+<p>기본 구성 화면</p>
+<ul>
+<li>화면에 기본적으로 Cube 오브젝트, 조명(light), 카메라(camera)가 표기</li>
+</ul>
+</li>
+<li>
+<p>Header 패널</p>
+<ul>
+<li>해당 Mode에 필요한 기본 메뉴들이 배치</li>
+</ul>
+</li>
+<li>
+<p>Toolbar 패널([T])</p>
+<ul>
+<li>기본 Object Mode에 적합한 기능들이 표시</li>
+</ul>
+</li>
+<li>
+<p>Sidebar([N])</p>
+<ul>
+<li>선택한 오브젝트의 좌표와 크기 등의 정보를 확인하거나 수치를 입력해서 변경할 수 있으며 각각의 탭에도 다양한 정보들이 있음</li>
+</ul>
+</li>
+<li>
+<p>Navigator</p>
+<ul>
+<li>좌표 기즈모(Gizmo)와 확대, 화면 이동, 카메라와 투시를 변경할 수 있음</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="3d-viewport-패널-조작하기"><a class="header" href="#3d-viewport-패널-조작하기">3D Viewport 패널 조작하기</a></h3>
+<ul>
+<li>
+<p>패널 분할하기</p>
+<ul>
+<li>경계선에서 마우스 오른쪽 버튼을 클릭한 다음 표시되는 창에서 <b>[Vertical Split] 또는 [Horizonatal Split]</b>를 실행하면 수평 또는 수직 분할</li>
+</ul>
+</li>
+<li>
+<p>화면 합치기</p>
+<ul>
+<li>합칠 화면의 경계선에서 마우스 오른쪽 버튼을 클릭하여 <b>[Join Area]</b>를 실행</li>
+</ul>
+</li>
+<li>
+<p>Editor Type 변경하기</p>
+<ul>
+<li>
+<p>변경할 패널 상단에서 ‘Editor Type’ 아이콘을 클릭하면 다양한 Edior를 선택할 수 있는 창이 표시</p>
+  <img src="images/1-44.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="기본-단축키-사용법"><a class="header" href="#기본-단축키-사용법">기본 단축키 사용법</a></h3>
+<ul>
+<li>
+<p>Screencast Keys 애드온 설치</p>
+  <img src="images/1-45.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-뷰포트-조작"><a class="header" href="#4-뷰포트-조작">4. 뷰포트 조작</a></h2>
+<ul>
+<li>
+<h3 id="화면-회전orbiting"><a class="header" href="#화면-회전orbiting">화면 회전(Orbiting)</a></h3>
+<ul>
+<li>
+<p>3D Viewport 에디터 안에서 마우스 휠 클릭한 후 드래그 또는 기즈모(gizmo) 사용</p>
+</li>
+<li>
+<p>블렌더에서 축별 방향 기준은 <b>X축(왼쪽/오른쪽), Y축(정면/후면), Z축(위/아래)</b> 임</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>동작</th><th>조작</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>화면회전(1)</strong></td><td>휠 클릭 &amp; 드래그</td></tr>
+<tr><td><strong>화면회전(2)</strong></td><td>내비게이션 기즈모 마우스 왼쪽 클릭 &amp; 드래그</td></tr>
+<tr><td><strong>수직회전(1)</strong></td><td><code>Alt</code> + 휠 클릭 &amp; 드래그</td></tr>
+<tr><td><strong>수직회전(2)</strong></td><td>내비게이션 기즈모 마우스 왼쪽 클릭</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>마우스 왼쪽버튼: MLB, 마우스 오른쪽 버튼: MRB</p>
+</blockquote>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/50_u5w2K784?si=NCyPANPvzJh67QBH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<ul>
+<li>
+<h3 id="시점-전환-숫자패드---파이메뉴"><a class="header" href="#시점-전환-숫자패드---파이메뉴">시점 전환 (숫자패드 / <code>~</code> 파이메뉴)</a></h3>
+</li>
+</ul>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>키</th><th>시점</th></tr>
+</thead>
+<tbody>
+<tr><td><code>1</code></td><td>Front (앞)</td></tr>
+<tr><td><code>3</code></td><td>Right (오른쪽)</td></tr>
+<tr><td><code>7</code></td><td>Top (위)</td></tr>
+<tr><td><code>0</code></td><td>카메라 시점</td></tr>
+<tr><td><code>5</code></td><td>원근 ↔ 직교 전환</td></tr>
+<tr><td><code>Ctrl</code> + <code>1/3/7</code></td><td>반대편 시점 (Back/Left/Bottom)</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>숫자패드가 없는 노트북: <code>Edit &gt; Preferences &gt; Input &gt; Emulate Numpad</code> 체크 또는 뷰포트 우측 상단의 <strong>기즈모(축 아이콘)</strong> 를 클릭</p>
+</blockquote>
+<blockquote>
+<p>💡 모델링은 <strong>직교(Orthographic) 뷰</strong>에서 하면 비례가 정확함</p>
+</blockquote>
+<blockquote>
+<p>Perspective Projection(원근투영): 멀리 있는 객체는 작게, 가까이 있는 객체는 크게 보인
+Orthographic Progection(직교투영): 거리에 상관없이 모든 객체가 실제 크기 그대로 표시</p>
+</blockquote>
+<ul>
+<li>
+<h3 id="화면-확대-축소scalling"><a class="header" href="#화면-확대-축소scalling">화면 확대, 축소(Scalling)</a></h3>
+<ul>
+<li>
+<p>마우스 휠 또는 숫자키패드를 이용하여 화면 확대 및 축소</p>
+</li>
+<li>
+<p>오브젝트가 여러 개 있을 경우 영역을 선택하고, 설정된 영역에 대해 확대 및 축소 가능</p>
+</li>
+<li>
+<p><code>Shift</code> + <code>B</code>로 선택 기능을 활성화하고 마우스 왼쪽버튼으로 영역 선택</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>동작</th><th>조작</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>화면 확대</strong></td><td>휠 업 또는 숫자키패드 +</td></tr>
+<tr><td><strong>화면 축소</strong></td><td>휠 다운 또는 숫자키패드 -</td></tr>
+<tr><td><strong>부드럽게 확대 / 축소</strong></td><td><code>Ctrl</code> + 휠 클릭 &amp; 드래그</td></tr>
+<tr><td><strong>전체영역보기</strong></td><td><code>Home</code></td></tr>
+<tr><td><strong>선택한 오브젝트만 확대해서 보기</strong></td><td>숫자키패드 .</td></tr>
+<tr><td><strong>뷰 파이 메뉴 띄우기</strong></td><td><code>Esc</code> 키 아래에 있는 억음부호(`)</td></tr>
+</tbody>
+</table>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oib83G67iKA?si=T8KgnJ6Ku3z44NHw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<h2 id="5-화면-이동하기panning"><a class="header" href="#5-화면-이동하기panning">5. 화면 이동하기(Panning)</a></h2>
+<ul>
+<li>마우스 휠 또는 숫자 키패드를 이용하여 화면 이동</li>
+</ul>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>동작</th><th>조작</th></tr>
+</thead>
+<tbody>
+<tr><td>화면이동</td><td><code>Shift</code> + 휠 클릭 &amp; 드래그</td></tr>
+<tr><td>위로 조금씩 이동</td><td><code>Ctrl</code> + 숫자키패드 2</td></tr>
+<tr><td>오른쪽으로 조금씩 이동</td><td><code>Ctrl</code> + 숫자키패드 4</td></tr>
+<tr><td>왼쪽으로 조금씩 이동</td><td><code>Ctrl</code> + 숫자키패드 6</td></tr>
+<tr><td>아래쪽으로 조금씩 이동</td><td><code>Ctrl</code> + 숫자키패드 8</td></tr>
+</tbody>
+</table>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S3OKw1ArfyI?si=JSs39wGFWIjaFeK6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe><div style="break-before: page; page-break-before: always;"></div>
+<h1 id="오브젝트-다루기"><a class="header" href="#오브젝트-다루기">오브젝트 다루기</a></h1>
+<h2 id="1-오브젝트-추가삭제"><a class="header" href="#1-오브젝트-추가삭제">1. 오브젝트 추가·삭제</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>동작</th><th>단축키</th></tr>
+</thead>
+<tbody>
+<tr><td>추가 메뉴</td><td><code>Shift + A</code> (Mesh &gt; Cube, Plane, Cylinder …)</td></tr>
+<tr><td>삭제</td><td><code>X</code> 또는 <code>Delete</code></td></tr>
+<tr><td>복제</td><td><code>Shift + D</code> (복제 후 바로 이동, 우클릭/<code>Esc</code>로 위치 취소)</td></tr>
+<tr><td>이름 변경</td><td><code>F2</code></td></tr>
+<tr><td>숨기기/보이기</td><td><code>H</code> / <code>Alt + H</code></td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>추가 직후 좌측 하단 <strong>Adjust Last Operation</strong> 패널을 펼치면 크기 · 분할 수 등을 바꿀 수 있음</p>
+</blockquote>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KPiYD4eTqUI?si=WJ6Doy3uoW5t5DGj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<h2 id="2-선택-방법"><a class="header" href="#2-선택-방법">2. 선택 방법</a></h2>
+<ul>
+<li>
+<p>마우스와 키패드를 이용하여 단일선택, 다중선택, 선택반전 등 기본 선택 기능 가능</p>
+</li>
+<li>
+<p>선택한 오브젝트를 활성 오브젝트(Active Object)라 하고, 4가지 선택 툴 제공</p>
+</li>
+</ul>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>동작</th><th>조작</th></tr>
+</thead>
+<tbody>
+<tr><td>선택</td><td>좌클릭</td></tr>
+<tr><td>단일 선택</td><td>MLB</td></tr>
+<tr><td>다중 선택</td><td><code>Shift</code> + MLB</td></tr>
+<tr><td>선택 반전</td><td><code>Ctrl + I</code></td></tr>
+<tr><td>전체 선택/해제</td><td><code>A</code> / <code>Alt + A</code></td></tr>
+<tr><td>박스 선택</td><td>빈 곳 드래그</td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="3-변환transform-3종-세트"><a class="header" href="#3-변환transform-3종-세트">3. 변환(Transform) 3종 세트</a></h2>
+<ul>
+<li>
+<h3 id="오브젝트-이동grab"><a class="header" href="#오브젝트-이동grab">오브젝트 이동(Grab)</a></h3>
+<ul>
+<li>
+<p>오브젝트별 중심점(Origin)을 이동시킨다는 의미</p>
+</li>
+<li>
+<p>단축키(G) 또는 사이드바(N)의 [Transform] 탭에서 Location 값을 변경하여 이동</p>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="오브젝트-회전rotate"><a class="header" href="#오브젝트-회전rotate">오브젝트 회전(Rotate)</a></h3>
+<ul>
+<li>단축키(R)와 사이드바의 [Transform] 탭에서 Rotation 값을 변경하여 회전</li>
+</ul>
+</li>
+<li>
+<h3 id="오브젝트-스케일-변경scale"><a class="header" href="#오브젝트-스케일-변경scale">오브젝트 스케일 변경(Scale)</a></h3>
+<ul>
+<li>
+<p>오브젝트 크기를 몇 배로 조정할지 결정할 때 사용하는 용어</p>
+</li>
+<li>
+<p>단축키(S)와 사이드바의 [Transform] 탭에서 Scale 값을 변경하여 회전</p>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="정확한-값-입력-n-패널"><a class="header" href="#정확한-값-입력-n-패널">정확한 값 입력: N 패널</a></h3>
+<ul>
+<li>
+<p><code>N</code> 키로 사이드바 &gt; <strong>Item</strong> 탭 &gt; Location / Rotation / <strong>Dimensions</strong> 에 직접 입력</p>
+</li>
+<li>
+<p>건물처럼 실제 크기가 있는 모델은 <strong>Dimensions</strong> 값을 확인하며 작업 (예: 10m × 8m × 3m)</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>변환</th><th>키</th><th>축 고정</th><th>수치 입력</th></tr>
+</thead>
+<tbody>
+<tr><td>이동 Grab</td><td><code>G</code></td><td><code>X</code> <code>Y</code> <code>Z</code></td><td><code>G</code> <code>X</code> <code>5</code> <code>Enter</code> → X로 5m</td></tr>
+<tr><td>회전 Rotate</td><td><code>R</code></td><td><code>X</code> <code>Y</code> <code>Z</code></td><td><code>R</code> <code>Z</code> <code>90</code> <code>Enter</code></td></tr>
+<tr><td>크기 Scale</td><td><code>S</code></td><td><code>X</code> <code>Y</code> <code>Z</code></td><td><code>S</code> <code>2</code> <code>Enter</code></td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="핵심-단축키-요약표"><a class="header" href="#핵심-단축키-요약표">핵심 단축키 요약표</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>키</th><th>기능</th><th>키</th><th>기능</th></tr>
+</thead>
+<tbody>
+<tr><td><code>Shift+A</code></td><td>추가</td><td><code>Tab</code></td><td>편집모드</td></tr>
+<tr><td><code>G/R/S</code></td><td>이동/회전/크기</td><td><code>E</code></td><td>돌출(Extrude)</td></tr>
+<tr><td><code>X</code></td><td>삭제</td><td><code>I</code></td><td>인셋(Inset)</td></tr>
+<tr><td><code>Shift+D</code></td><td>복제</td><td><code>Ctrl+B</code></td><td>베벨(Bevel)</td></tr>
+<tr><td><code>Ctrl+A</code></td><td>적용</td><td><code>Ctrl+R</code></td><td>루프컷</td></tr>
+<tr><td><code>Ctrl+Z</code></td><td>되돌리기</td><td><code>F</code></td><td>면 만들기</td></tr>
+<tr><td><code>N</code></td><td>사이드바</td><td><code>M</code></td><td>병합(Merge)</td></tr>
+<tr><td><code>Ctrl+S</code></td><td>저장</td><td><code>Ctrl+Shift+Z</code></td><td>다시 실행</td></tr>
+</tbody>
+</table>
+</div>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="edit-mode"><a class="header" href="#edit-mode">Edit Mode</a></h1>
+<h2 id="1-오브젝트-모드-vs-편집-모드"><a class="header" href="#1-오브젝트-모드-vs-편집-모드">1. 오브젝트 모드 vs 편집 모드</a></h2>
+<ul>
+<li>
+<p>오브젝트의 형태를 이루는 점(vertex), 선(edge), 면(face)을 <strong>수정할 수 있는 상태</strong></p>
+</li>
+<li>
+<p>점, 선, 면이 모여서 geometry를 이룰 때 <b>메쉬(mesh)</b>라고 함</p>
+  <img src="images/1-46.png" width="90%" height="90%"> 
+</li>
+</ul>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>모드</th><th>전환</th><th>할 수 있는 일</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Object Mode</strong></td><td>기본</td><td>오브젝트 단위 이동/회전/크기, 복제, 모디파이어</td></tr>
+<tr><td><strong>Edit Mode</strong></td><td><code>Tab</code></td><td>정점·모서리·면 편집 (모델링의 핵심)</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>편집 모드에서 선택 단위 전환: <strong><code>1</code> 정점 / <code>2</code> 모서리 / <code>3</code> 면</strong> (키보드 상단 숫자)</p>
+</blockquote>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eHava4SGxO0?si=vx4XQS_Zn7sRZEv2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<h2 id="2-extrude"><a class="header" href="#2-extrude">2. Extrude</a></h2>
+<ul>
+<li>
+<p>Edit Mode에서 오브젝트의 요소를 <strong>밀어내는 기능</strong></p>
+</li>
+<li>
+<p>요소 선택 후 <strong>단축키 E</strong>를 클릭하여 점, 선, 면을 노란색 핸들을 드래그하여 밀어냄</p>
+  <img src="images/1-47.png" width="100%" height="100%"> 
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/D8MKO1iRKmE?si=vn0Mibg0uCj_JnEm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</li>
+</ul>
+<h2 id="3-bevel"><a class="header" href="#3-bevel">3. Bevel</a></h2>
+<ul>
+<li>
+<p>오브젝트의 <strong>각진 부분을 다듬는 기능</strong>으로 Bevel Vertices와 Bevel Edges 기능으로 구분</p>
+</li>
+<li>
+<p>오브젝트의 Edge 또는 Face를 선택한 후 <strong>노란색 핸들을 MLB 클릭하여 드래그</strong></p>
+  <img src="images/1-48.png" width="90%" height="90%"> 
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/jbkGiOQk0KY?si=tqYzyulIfPqUWpP-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</li>
+</ul>
+<h2 id="4-loop-cut"><a class="header" href="#4-loop-cut">4. Loop Cut</a></h2>
+<ul>
+<li>
+<p>종이를 길게 오려내듯이 <strong>Face를 연속적으로 나누는 기능</strong>으로 표면이 연속적으로 흘러가는 모델링에서 유용하게 사용</p>
+</li>
+<li>
+<p>단, Face를 이루는 Vertex가 4개일 때만 Loop Cut 사용 가능</p>
+  <img src="images/1-49.png" width="80%" height="80%"> 
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/anqBDBxvsQU?si=IcIJGq0U9VpkWqdZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="3d-모델링"><a class="header" href="#3d-모델링">3D 모델링</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="3d-모델링-이론-및-실습이론"><a class="header" href="#3d-모델링-이론-및-실습이론">3D 모델링 이론 및 실습이론</a></h1>
 <h2 id="2d-graphics"><a class="header" href="#2d-graphics">2D graphics</a></h2>
@@ -289,7 +1507,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="edit-mode"><a class="header" href="#edit-mode">Edit mode</a></h2>
+<h2 id="edit-mode-1"><a class="header" href="#edit-mode-1">Edit mode</a></h2>
 <div class="table-wrapper">
 <table>
 <thead>

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>재질 &amp; texture - 3D 그래픽 기본</title>
+        <title>3D 모델링 이론 및 실습이론 - 3D 그래픽 기본</title>
 
 
         <!-- Custom HTML head -->
@@ -36,10 +36,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-ff539535.js";
+            window.path_to_searchindex_js = "searchindex-58519906.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-7cbb4c44.js"></script>
+        <script src="toc-58498ee7.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -175,59 +175,233 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="재질--texture"><a class="header" href="#재질--texture">재질 &amp; texture</a></h1>
-<h2 id="재질"><a class="header" href="#재질">재질</a></h2>
-<p>모델이 주는 느낌. 플라스틱인가, 금속인가?</p>
+                        <h1 id="3d-모델링-이론-및-실습이론"><a class="header" href="#3d-모델링-이론-및-실습이론">3D 모델링 이론 및 실습이론</a></h1>
+<h2 id="2d-graphics"><a class="header" href="#2d-graphics">2D graphics</a></h2>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-03.jpg" alt="2D graphics"><span class="img-wrapper"><img src="images/slide-03.jpg" alt="2D graphics"></span></label></p>
 <ul>
-<li>물체의 고유색(빨간색, 파란색, 노란색, 갈색): <strong>base color</strong></li>
-<li>표면의 거칠기(거친 정도가 0이면 거울처럼 된다): <strong>roughness</strong></li>
-<li>금속인 정도(금속인 정도가 1이면 금속처럼 반짝인다): <strong>metallic</strong></li>
+<li>점, 선, 면으로 이루어짐</li>
+<li>높이에 대한 개념이 없음</li>
+<li>X, Y축으로 위치를 표시</li>
+<li>파워포인트에서 사각형 등 작업</li>
 </ul>
-<h3 id="pbrphysically-based-rendering"><a class="header" href="#pbrphysically-based-rendering">PBR(Physically Based Rendering)</a></h3>
+<h2 id="3d-graphics"><a class="header" href="#3d-graphics">3D graphics</a></h2>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-04.jpg" alt="3D graphics"><span class="img-wrapper"><img src="images/slide-04.jpg" alt="3D graphics"></span></label></p>
 <ul>
-<li>3D 그래픽 애니메이션을 만드는 디즈니에서 상업화한 기술</li>
-<li>3D 프로그램마다 재질을 표현하는 방법이 다 달라 옛날 작품 수정이 어려움</li>
-<li>재질이 보여지는 방법을 물리적인 속성을 이용해 표현(색, 금속성, 거칠기 등)</li>
-<li>통일된 표현법</li>
+<li>점, 선, 면으로 이루어짐</li>
+<li><strong>높이</strong> 개념이 추가됨</li>
+<li>X, Y, Z축으로 위치를 표시</li>
 </ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-45.jpg" alt="roughness와 metallic 비교"><span class="img-wrapper"><img src="images/slide-45.jpg" alt="roughness와 metallic 비교"></span></label></p>
-<h2 id="texture텍스처"><a class="header" href="#texture텍스처">texture(텍스처)</a></h2>
+<h2 id="x-y-z-축을-쉽게-알아보는-법"><a class="header" href="#x-y-z-축을-쉽게-알아보는-법">X, Y, Z 축을 쉽게 알아보는 법</a></h2>
+<ul>
+<li>2D 그래픽에서는 가로가 X축, 세로가 Y축</li>
+<li>3D 그래픽에서는 화면 회전이 많아 X, Y, Z축을 한 번에 알아채기 어렵다</li>
+<li>축의 색을 RGB 순서로 기억하면 쉽다</li>
+</ul>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>색</th><th>축</th></tr>
+</thead>
+<tbody>
+<tr><td>R: Red</td><td>X</td></tr>
+<tr><td>G: Green</td><td>Y</td></tr>
+<tr><td>B: Blue</td><td>Z</td></tr>
+</tbody>
+</table>
+</div>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-08.jpg" alt="X, Y, Z 축 색상"><span class="img-wrapper"><img src="images/slide-08.jpg" alt="X, Y, Z 축 색상"></span></label></p>
+<h2 id="x-y-z-축-문제"><a class="header" href="#x-y-z-축-문제">X, Y, Z 축 문제</a></h2>
+<p>1칸을 1로 봤을 때,</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-09.jpg" alt="X, Y, Z 축 문제 예시"><span class="img-wrapper"><img src="images/slide-09.jpg" alt="X, Y, Z 축 문제 예시"></span></label></p>
+<ul>
+<li>빨간 점의 X좌표는 4</li>
+<li>빨간 점의 Z좌표는 2</li>
+<li>빨간 점의 Y좌표는 0</li>
+</ul>
+<h3 id="문제-1"><a class="header" href="#문제-1">문제 1</a></h3>
+<p>빨간 점의 X, Y, Z좌표는?</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-10.jpg" alt="문제 1"><span class="img-wrapper"><img src="images/slide-10.jpg" alt="문제 1"></span></label></p>
+<h3 id="문제-2"><a class="header" href="#문제-2">문제 2</a></h3>
+<p>빨간 점의 X, Y, Z좌표는?</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-11.jpg" alt="문제 2"><span class="img-wrapper"><img src="images/slide-11.jpg" alt="문제 2"></span></label></p>
+<h3 id="문제-3"><a class="header" href="#문제-3">문제 3</a></h3>
+<p>빨간 점의 X, Y, Z좌표는?</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-12.jpg" alt="문제 3"><span class="img-wrapper"><img src="images/slide-12.jpg" alt="문제 3"></span></label></p>
+<h3 id="문제-4"><a class="header" href="#문제-4">문제 4</a></h3>
+<p>빨간 점의 X, Y, Z좌표는?</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-13.jpg" alt="문제 4"><span class="img-wrapper"><img src="images/slide-13.jpg" alt="문제 4"></span></label></p>
+<h3 id="문제-5"><a class="header" href="#문제-5">문제 5</a></h3>
+<p>빨간 점의 X, Y, Z좌표는?</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-14.jpg" alt="문제 5"><span class="img-wrapper"><img src="images/slide-14.jpg" alt="문제 5"></span></label></p>
+<h3 id="문제-6"><a class="header" href="#문제-6">문제 6</a></h3>
+<p>빨간 점의 X, Y, Z좌표는?</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-15.jpg" alt="문제 6"><span class="img-wrapper"><img src="images/slide-15.jpg" alt="문제 6"></span></label></p>
+<h3 id="문제-7"><a class="header" href="#문제-7">문제 7</a></h3>
+<p>빨간 점의 X, Y, Z좌표는?</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-16.jpg" alt="문제 7"><span class="img-wrapper"><img src="images/slide-16.jpg" alt="문제 7"></span></label></p>
+<h2 id="복습문제-1"><a class="header" href="#복습문제-1">복습문제 1</a></h2>
+<p><a href="https://profkim2000.github.io/board/3dgraphics/quiz/quiz-01.html">https://profkim2000.github.io/board/3dgraphics/quiz/quiz-01.html</a></p>
+<h2 id="perspective-vs-orthographic"><a class="header" href="#perspective-vs-orthographic">Perspective vs Orthographic</a></h2>
+<ul>
+<li><strong>perspective</strong>: 입체적인
+<ul>
+<li>멀리 있는 물체는 작게, 가까운 물체는 크게 보이는 등 입체감이 있음</li>
+</ul>
+</li>
+<li><strong>orthographic</strong>: 직교투영. 입체적이지 않은
+<ul>
+<li>거리와 상관없이 물체의 크기가 똑같이 느껴진다</li>
+<li>Top view, Front view, Right view 등에서 사용</li>
+</ul>
+</li>
+<li>단축키: 숫자키패드 <code>5</code></li>
+</ul>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-19.jpg" alt="Perspective vs Orthographic"><span class="img-wrapper"><img src="images/slide-19.jpg" alt="Perspective vs Orthographic"></span></label></p>
+<h2 id="오브젝트의-이동-회전-크기"><a class="header" href="#오브젝트의-이동-회전-크기">오브젝트의 이동, 회전, 크기</a></h2>
+<ul>
+<li><strong>이동</strong>: <code>G</code>
+<ul>
+<li>축 따라 이동: <code>G</code>키를 누른 후 원하는 축에 따라 (<code>X</code> / <code>Y</code> / <code>Z</code>)</li>
+<li>Z축으로의 이동은 제한하고 X, Y축으로만 이동할 때는 <code>Shift</code> + <code>Z</code></li>
+</ul>
+</li>
+<li><strong>회전</strong>: <code>R</code>
+<ul>
+<li>축 기준 회전: <code>R</code>키를 누른 후 원하는 축에 따라 (<code>X</code> / <code>Y</code> / <code>Z</code>)</li>
+</ul>
+</li>
+<li><strong>크기</strong>: <code>S</code>
+<ul>
+<li>축 따라 크기 조정: <code>S</code>키를 누른 후 원하는 축에 따라 (<code>X</code> / <code>Y</code> / <code>Z</code>)</li>
+</ul>
+</li>
+</ul>
+<h2 id="edit-mode"><a class="header" href="#edit-mode">Edit mode</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>기능</th><th>단축키</th></tr>
+</thead>
+<tbody>
+<tr><td>Edit mode / Object mode 변경</td><td><code>Tab</code></td></tr>
+<tr><td>vertex(점) 수정</td><td><code>1</code></td></tr>
+<tr><td>edge(모서리, 선) 수정</td><td><code>2</code></td></tr>
+<tr><td>face(면) 수정</td><td><code>3</code></td></tr>
+<tr><td>Extrude(돌출)</td><td><code>E</code></td></tr>
+<tr><td>bevel(베벨, 모따기)</td><td><code>Ctrl</code> + <code>B</code></td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>모깎기: 모따기한 후 마우스 휠</p>
+</blockquote>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-21.jpg" alt="Edit mode - bevel"><span class="img-wrapper"><img src="images/slide-21.jpg" alt="Edit mode - bevel"></span></label></p>
+<h2 id="modeling모델링"><a class="header" href="#modeling모델링">Modeling(모델링)</a></h2>
+<ul>
+<li>빌딩 등의 겉 모습</li>
+</ul>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-22.jpg" alt="Modeling"><span class="img-wrapper"><img src="images/slide-22.jpg" alt="Modeling"></span></label></p>
+<h2 id="texture텍스처"><a class="header" href="#texture텍스처">Texture(텍스처)</a></h2>
 <ul>
 <li>빌딩 등 model의 겉면 이미지</li>
 </ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-46.jpg" alt="texture"><span class="img-wrapper"><img src="images/slide-46.jpg" alt="texture"></span></label></p>
-<h2 id="texture텍스처-입히는-방법"><a class="header" href="#texture텍스처-입히는-방법">texture(텍스처) 입히는 방법</a></h2>
-<h3 id="직접-그리기"><a class="header" href="#직접-그리기">직접 그리기</a></h3>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-47.jpg" alt="직접 그리기"><span class="img-wrapper"><img src="images/slide-47.jpg" alt="직접 그리기"></span></label></p>
-<h3 id="사진-찍어-각-면에-붙이기"><a class="header" href="#사진-찍어-각-면에-붙이기">사진 찍어 각 면에 붙이기</a></h3>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-48.jpg" alt="사진 찍어 붙이기"><span class="img-wrapper"><img src="images/slide-48.jpg" alt="사진 찍어 붙이기"></span></label></p>
-<h3 id="uv"><a class="header" href="#uv">UV</a></h3>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-23.jpg" alt="Texture"><span class="img-wrapper"><img src="images/slide-23.jpg" alt="Texture"></span></label></p>
+<h2 id="light조명"><a class="header" href="#light조명">Light(조명)</a></h2>
 <ul>
-<li>정육면체를 펴서 파워포인트로 주사위 텍스처 만들기</li>
+<li>모델에 빛을 줘 밝기와 그림자 효과를 준다</li>
 </ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-49.jpg" alt="UV 주사위 텍스처"><span class="img-wrapper"><img src="images/slide-49.jpg" alt="UV 주사위 텍스처"></span></label></p>
-<h2 id="normal노말"><a class="header" href="#normal노말">normal(노말)</a></h2>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-24.jpg" alt="Light"><span class="img-wrapper"><img src="images/slide-24.jpg" alt="Light"></span></label></p>
+<h2 id="render렌더"><a class="header" href="#render렌더">Render(렌더)</a></h2>
 <ul>
-<li>살짝 긁힌 상처, 홈 등을 표현</li>
-<li>자잘한 상처를 전부 모델링하면 모델이 매우 복잡해져 처리 속도가 느려짐</li>
-<li>’이 부분은 상처 난 것처럼 살짝 파인 부분이다’를 표현하는 가장 빠른 처리 방법</li>
-<li>그림자로 모델의 상처 부위 깊이를 표현</li>
+<li>model, texture, light, 카메라 등을 모두 계산해 최종 이미지를 만들어 내는 것</li>
 </ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-51.jpg" alt="normal 미적용 vs 적용"><span class="img-wrapper"><img src="images/slide-51.jpg" alt="normal 미적용 vs 적용"></span></label></p>
-<h2 id="재질-예시"><a class="header" href="#재질-예시">재질 예시</a></h2>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-52.jpg" alt="나무, 옷감, 금속 재질"><span class="img-wrapper"><img src="images/slide-52.jpg" alt="나무, 옷감, 금속 재질"></span></label></p>
-<h2 id="재질-실습"><a class="header" href="#재질-실습">재질 실습</a></h2>
-<p><strong>과정 안내</strong>: <a href="https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-06.html">https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-06.html</a></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-25.jpg" alt="Render"><span class="img-wrapper"><img src="images/slide-25.jpg" alt="Render"></span></label></p>
+<h2 id="동영상"><a class="header" href="#동영상">동영상</a></h2>
+<ul>
+<li><strong>키프레임(keyframe)</strong>
+<ul>
+<li>동영상을 만드는 모든 프로그램에서 사용</li>
+<li>동작을 정의하는 가장 쉬운 방법</li>
+<li><strong>Interpolation</strong>
+<ul>
+<li>0초에 A지점을 키프레임으로 지정하고,</li>
+<li>3초에 B지점을 키프레임으로 지정하면,</li>
+<li>0~3초 사이의 중간 지점을 자동으로 생성해서 이동하는 것처럼 만들어줌</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>주사위가 굴러가는 동영상</strong>
+<ul>
+<li>이동과 회전 키프레임이 적절하게 설정되어야 자연스럽게 보임</li>
+</ul>
+</li>
+</ul>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-27.jpg" alt="주사위 동영상"><span class="img-wrapper"><img src="images/slide-27.jpg" alt="주사위 동영상"></span></label></p>
+<h2 id="fbx"><a class="header" href="#fbx">FBX</a></h2>
+<ul>
+<li><strong>FBX(FilmBoX)</strong>
+<ul>
+<li>3D 그래픽 자료 호환의 사실상 표준</li>
+<li>다른 프로그램으로 자료를 넘길 때 FBX로 export 한 파일을 넘겨준다</li>
+</ul>
+</li>
+</ul>
+<h2 id="실습-건물-만들기"><a class="header" href="#실습-건물-만들기">실습: 건물 만들기</a></h2>
+<ul>
+<li>건물은 직육면체를 활용</li>
+<li>텍스처는 <a href="https://pixabay.com">pixabay.com</a>에서 다운로드해 사용
+<ul>
+<li>검색어: <code>building facade</code></li>
+</ul>
+</li>
+</ul>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-29.jpg" alt="건물 만들기"><span class="img-wrapper"><img src="images/slide-29.jpg" alt="건물 만들기"></span></label></p>
+<p><strong>활용 기술</strong>: 3D 모델링, 조명, 재질, UV / 텍스처, 렌더링</p>
+<p><strong>과정 안내</strong>: <a href="https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-01.html">https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-01.html</a></p>
+<h2 id="실습-책상-만들기-1"><a class="header" href="#실습-책상-만들기-1">실습: 책상 만들기 1</a></h2>
+<ul>
+<li>mesh들을 조합하여 책상 만들기</li>
+<li>텍스처는 <a href="https://pixabay.com">pixabay.com</a>에서 다운로드해 사용
+<ul>
+<li>검색어: <code>wood texture</code></li>
+</ul>
+</li>
+</ul>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-31.jpg" alt="책상 만들기 1"><span class="img-wrapper"><img src="images/slide-31.jpg" alt="책상 만들기 1"></span></label></p>
+<p><strong>활용 기술</strong>: 3D 모델링, 조명, 재질, UV / 텍스처, 렌더링</p>
+<p><strong>과정 안내</strong>: <a href="https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-02.html">https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-02.html</a></p>
+<h2 id="실습-책상-만들기-2"><a class="header" href="#실습-책상-만들기-2">실습: 책상 만들기 2</a></h2>
+<ul>
+<li>Edit 모드를 이용해 1개의 mesh로 책상 만들기</li>
+<li>텍스처는 <a href="https://pixabay.com">pixabay.com</a>에서 다운로드해 사용
+<ul>
+<li>검색어: <code>wood texture</code></li>
+</ul>
+</li>
+</ul>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-33.jpg" alt="책상 만들기 2"><span class="img-wrapper"><img src="images/slide-33.jpg" alt="책상 만들기 2"></span></label></p>
+<p><strong>활용 기술</strong>: 3D 모델링, 조명, 재질, UV / 텍스처, 렌더링</p>
+<p><strong>과정 안내</strong>: <a href="https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-03.html">https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-03.html</a></p>
+<h2 id="실습-책상-만들기-3"><a class="header" href="#실습-책상-만들기-3">실습: 책상 만들기 3</a></h2>
+<ul>
+<li>하나의 mesh에 다양한 재질 입히기</li>
+</ul>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-35.jpg" alt="책상 만들기 3"><span class="img-wrapper"><img src="images/slide-35.jpg" alt="책상 만들기 3"></span></label></p>
+<p><strong>활용 기술</strong>: 재질</p>
+<p><strong>과정 안내</strong>: <a href="https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-04.html">https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-04.html</a></p>
+<h2 id="복습문제-2"><a class="header" href="#복습문제-2">복습문제 2</a></h2>
+<p><a href="https://profkim2000.github.io/board/3dgraphics/quiz/quiz-02.html">https://profkim2000.github.io/board/3dgraphics/quiz/quiz-02.html</a></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="02-floorplan-3d.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="03-modeling/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="04-light.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="05-floorplan-3d.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -237,11 +411,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="02-floorplan-3d.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="03-modeling/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="04-light.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="05-floorplan-3d.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>
