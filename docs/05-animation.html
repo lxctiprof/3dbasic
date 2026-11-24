@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>재질 &amp; texture - 3D 그래픽 기본</title>
+        <title>애니메이션 - 3D 그래픽 기본</title>
 
 
         <!-- Custom HTML head -->
@@ -36,10 +36,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-14c28e9a.js";
+            window.path_to_searchindex_js = "searchindex-23266920.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-8e6c16ee.js"></script>
+        <script src="toc-2fd6f7e7.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -175,59 +175,37 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="재질--texture"><a class="header" href="#재질--texture">재질 &amp; texture</a></h1>
-<h2 id="재질"><a class="header" href="#재질">재질</a></h2>
-<p>모델이 주는 느낌. 플라스틱인가, 금속인가?</p>
+                        <h1 id="애니메이션"><a class="header" href="#애니메이션">애니메이션</a></h1>
 <ul>
-<li>물체의 고유색(빨간색, 파란색, 노란색, 갈색): <strong>base color</strong></li>
-<li>표면의 거칠기(거친 정도가 0이면 거울처럼 된다): <strong>roughness</strong></li>
-<li>금속인 정도(금속인 정도가 1이면 금속처럼 반짝인다): <strong>metallic</strong></li>
-</ul>
-<h3 id="pbrphysically-based-rendering"><a class="header" href="#pbrphysically-based-rendering">PBR(Physically Based Rendering)</a></h3>
+<li><strong>키프레임(keyframe)</strong>
 <ul>
-<li>3D 그래픽 애니메이션을 만드는 디즈니에서 상업화한 기술</li>
-<li>3D 프로그램마다 재질을 표현하는 방법이 다 달라 옛날 작품 수정이 어려움</li>
-<li>재질이 보여지는 방법을 물리적인 속성을 이용해 표현(색, 금속성, 거칠기 등)</li>
-<li>통일된 표현법</li>
-</ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-45.jpg" alt="roughness와 metallic 비교"><span class="img-wrapper"><img src="images/slide-45.jpg" alt="roughness와 metallic 비교"></span></label></p>
-<h2 id="texture텍스처"><a class="header" href="#texture텍스처">texture(텍스처)</a></h2>
+<li>동영상을 만드는 모든 프로그램에서 사용</li>
+<li>동작을 정의하는 가장 쉬운 방법</li>
+<li><strong>Interpolation</strong>
 <ul>
-<li>빌딩 등 model의 겉면 이미지</li>
+<li>0초에 A지점을 키프레임으로 지정하고,</li>
+<li>3초에 B지점을 키프레임으로 지정하면,</li>
+<li>0~3초 사이의 중간 지점을 자동으로 생성해서 이동하는 것처럼 만들어줌</li>
 </ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-46.jpg" alt="texture"><span class="img-wrapper"><img src="images/slide-46.jpg" alt="texture"></span></label></p>
-<h2 id="texture텍스처-입히는-방법"><a class="header" href="#texture텍스처-입히는-방법">texture(텍스처) 입히는 방법</a></h2>
-<h3 id="직접-그리기"><a class="header" href="#직접-그리기">직접 그리기</a></h3>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-47.jpg" alt="직접 그리기"><span class="img-wrapper"><img src="images/slide-47.jpg" alt="직접 그리기"></span></label></p>
-<h3 id="사진-찍어-각-면에-붙이기"><a class="header" href="#사진-찍어-각-면에-붙이기">사진 찍어 각 면에 붙이기</a></h3>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-48.jpg" alt="사진 찍어 붙이기"><span class="img-wrapper"><img src="images/slide-48.jpg" alt="사진 찍어 붙이기"></span></label></p>
-<h3 id="uv"><a class="header" href="#uv">UV</a></h3>
+</li>
+</ul>
+</li>
+<li><strong>주사위가 굴러가는 동영상</strong>
 <ul>
-<li>정육면체를 펴서 파워포인트로 주사위 텍스처 만들기</li>
+<li>이동과 회전 키프레임이 적절하게 설정되어야 자연스럽게 보임</li>
 </ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-49.jpg" alt="UV 주사위 텍스처"><span class="img-wrapper"><img src="images/slide-49.jpg" alt="UV 주사위 텍스처"></span></label></p>
-<h2 id="normal노말"><a class="header" href="#normal노말">normal(노말)</a></h2>
-<ul>
-<li>살짝 긁힌 상처, 홈 등을 표현</li>
-<li>자잘한 상처를 전부 모델링하면 모델이 매우 복잡해져 처리 속도가 느려짐</li>
-<li>’이 부분은 상처 난 것처럼 살짝 파인 부분이다’를 표현하는 가장 빠른 처리 방법</li>
-<li>그림자로 모델의 상처 부위 깊이를 표현</li>
+</li>
 </ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-51.jpg" alt="normal 미적용 vs 적용"><span class="img-wrapper"><img src="images/slide-51.jpg" alt="normal 미적용 vs 적용"></span></label></p>
-<h2 id="재질-예시"><a class="header" href="#재질-예시">재질 예시</a></h2>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-52.jpg" alt="나무, 옷감, 금속 재질"><span class="img-wrapper"><img src="images/slide-52.jpg" alt="나무, 옷감, 금속 재질"></span></label></p>
-<h2 id="재질-실습"><a class="header" href="#재질-실습">재질 실습</a></h2>
-<p><strong>과정 안내</strong>: <a href="https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-06.html">https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-06.html</a></p>
-
+<iframe width="800" height="450" src="https://www.youtube.com/embed/4YTQkijOcKA?si=FdKqJuY7E2S9YhmL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="quiz/3d05-quiz.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="quiz/3d04-quiz.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="07-light.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="06-floorplan-3d.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -237,11 +215,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="quiz/3d05-quiz.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="quiz/3d04-quiz.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="07-light.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="06-floorplan-3d.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>

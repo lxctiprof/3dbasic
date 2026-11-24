@@ -37,10 +37,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-14c28e9a.js";
+            window.path_to_searchindex_js = "searchindex-23266920.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-8e6c16ee.js"></script>
+        <script src="toc-2fd6f7e7.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -1470,8 +1470,6 @@ Orthographic Progection(직교투영): 거리에 상관없이 모든 객체가 �
 <h3 id="문제-7"><a class="header" href="#문제-7">문제 7</a></h3>
 <p>빨간 점의 X, Y, Z좌표는?</p>
 <p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-16.jpg" alt="문제 7"><span class="img-wrapper"><img src="images/slide-16.jpg" alt="문제 7"></span></label></p>
-<h2 id="복습문제-1"><a class="header" href="#복습문제-1">복습문제 1</a></h2>
-<p><a href="https://profkim2000.github.io/board/3dgraphics/quiz/quiz-01.html">https://profkim2000.github.io/board/3dgraphics/quiz/quiz-01.html</a></p>
 <h2 id="perspective-vs-orthographic"><a class="header" href="#perspective-vs-orthographic">Perspective vs Orthographic</a></h2>
 <ul>
 <li><strong>perspective</strong>: 입체적인
@@ -1531,23 +1529,83 @@ Orthographic Progection(직교투영): 거리에 상관없이 모든 객체가 �
 <ul>
 <li>빌딩 등의 겉 모습</li>
 </ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-22.jpg" alt="Modeling"><span class="img-wrapper"><img src="images/slide-22.jpg" alt="Modeling"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261124131826.png" alt=""><span class="img-wrapper"><img src="attachments/20261124131826.png" alt=""></span></label></p>
 <h2 id="texture텍스처"><a class="header" href="#texture텍스처">Texture(텍스처)</a></h2>
 <ul>
 <li>빌딩 등 model의 겉면 이미지</li>
 </ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-23.jpg" alt="Texture"><span class="img-wrapper"><img src="images/slide-23.jpg" alt="Texture"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261124132101.png" alt=""><span class="img-wrapper"><img src="attachments/20261124132101.png" alt=""></span></label></p>
 <h2 id="light조명"><a class="header" href="#light조명">Light(조명)</a></h2>
 <ul>
 <li>모델에 빛을 줘 밝기와 그림자 효과를 준다</li>
 </ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-24.jpg" alt="Light"><span class="img-wrapper"><img src="images/slide-24.jpg" alt="Light"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261124132154.png" alt=""><span class="img-wrapper"><img src="attachments/20261124132154.png" alt=""></span></label></p>
 <h2 id="render렌더"><a class="header" href="#render렌더">Render(렌더)</a></h2>
 <ul>
 <li>model, texture, light, 카메라 등을 모두 계산해 최종 이미지를 만들어 내는 것</li>
 </ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-25.jpg" alt="Render"><span class="img-wrapper"><img src="images/slide-25.jpg" alt="Render"></span></label></p>
-<h2 id="동영상"><a class="header" href="#동영상">동영상</a></h2>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261124132208.png" alt=""><span class="img-wrapper"><img src="attachments/20261124132208.png" alt=""></span></label></p>
+<h2 id="fbx"><a class="header" href="#fbx">FBX</a></h2>
+<ul>
+<li><strong>FBX(FilmBoX)</strong>
+<ul>
+<li>3D 그래픽 자료 호환의 사실상 표준</li>
+<li>다른 프로그램으로 자료를 넘길 때 FBX로 export 한 파일을 넘겨준다</li>
+</ul>
+</li>
+</ul>
+<h2 id="실습-건물-만들기"><a class="header" href="#실습-건물-만들기">실습: 건물 만들기</a></h2>
+<ul>
+<li>건물은 직육면체를 활용</li>
+<li>텍스처는 <a href="https://pixabay.com">pixabay.com</a>에서 다운로드해 사용
+<ul>
+<li>검색어: <code>building facade</code></li>
+</ul>
+</li>
+</ul>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261124132239.png" alt=""><span class="img-wrapper"><img src="attachments/20261124132239.png" alt=""></span></label></p>
+<p><strong>활용 기술</strong>: 3D 모델링, 조명, 재질, UV / 텍스처, 렌더링</p>
+<p><strong>실습:</strong></p>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/WbtI131sD4g?si=AjUOq74Ubkws2eNM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<h2 id="실습-책상-만들기-1"><a class="header" href="#실습-책상-만들기-1">실습: 책상 만들기 1</a></h2>
+<ul>
+<li>mesh들을 조합하여 책상 만들기</li>
+<li>텍스처는 <a href="https://pixabay.com">pixabay.com</a>에서 다운로드해 사용
+<ul>
+<li>검색어: <code>wood texture</code></li>
+</ul>
+</li>
+</ul>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261124132313.png" alt=""><span class="img-wrapper"><img src="attachments/20261124132313.png" alt=""></span></label></p>
+<p><strong>활용 기술</strong>: 3D 모델링, 조명, 재질, UV / 텍스처, 렌더링</p>
+<p><strong>실습:</strong></p>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/Gv_PMvUfV_Q?si=ujHBZUaGQLpOB7MU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<h2 id="실습-책상-만들기-2"><a class="header" href="#실습-책상-만들기-2">실습: 책상 만들기 2</a></h2>
+<ul>
+<li>Edit 모드를 이용해 1개의 mesh로 책상 만들기</li>
+<li>텍스처는 <a href="https://pixabay.com">pixabay.com</a>에서 다운로드해 사용
+<ul>
+<li>검색어: <code>wood texture</code></li>
+</ul>
+</li>
+</ul>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261124132408.png" alt=""><span class="img-wrapper"><img src="attachments/20261124132408.png" alt=""></span></label></p>
+<p><strong>활용 기술</strong>: 3D 모델링, 조명, 재질, UV / 텍스처, 렌더링</p>
+<p><strong>실습:</strong></p>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/8u0vaEIxSME?si=vVggzGr4juZed9Hl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<p><strong>loop cut</strong>: 면을 나눌 때 사용. 단축키: ctrl + R</p>
+<h2 id="실습-책상-만들기-3"><a class="header" href="#실습-책상-만들기-3">실습: 책상 만들기 3</a></h2>
+<ul>
+<li>하나의 mesh에 다양한 재질 입히기</li>
+</ul>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261124132426.png" alt=""><span class="img-wrapper"><img src="attachments/20261124132426.png" alt=""></span></label></p>
+<p><strong>활용 기술</strong>: 재질</p>
+<p><strong>실습:</strong></p>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/R_PQLPoEcQQ?si=HDKow9EqBvGvXSHv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe><div style="break-before: page; page-break-before: always;"></div>
+<h1 id="4-3d-모델링-이론-및-실습이론"><a class="header" href="#4-3d-모델링-이론-및-실습이론">4. 3D 모델링 이론 및 실습이론</a></h1>
+<iframe src="quiz.html?id=3d04" style="display:block; width:70vw; height: 75vh; border: none;"></iframe>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="애니메이션"><a class="header" href="#애니메이션">애니메이션</a></h1>
 <ul>
 <li><strong>키프레임(keyframe)</strong>
 <ul>
@@ -1568,77 +1626,24 @@ Orthographic Progection(직교투영): 거리에 상관없이 모든 객체가 �
 </ul>
 </li>
 </ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-27.jpg" alt="주사위 동영상"><span class="img-wrapper"><img src="images/slide-27.jpg" alt="주사위 동영상"></span></label></p>
-<h2 id="fbx"><a class="header" href="#fbx">FBX</a></h2>
-<ul>
-<li><strong>FBX(FilmBoX)</strong>
-<ul>
-<li>3D 그래픽 자료 호환의 사실상 표준</li>
-<li>다른 프로그램으로 자료를 넘길 때 FBX로 export 한 파일을 넘겨준다</li>
-</ul>
-</li>
-</ul>
-<h2 id="실습-건물-만들기"><a class="header" href="#실습-건물-만들기">실습: 건물 만들기</a></h2>
-<ul>
-<li>건물은 직육면체를 활용</li>
-<li>텍스처는 <a href="https://pixabay.com">pixabay.com</a>에서 다운로드해 사용
-<ul>
-<li>검색어: <code>building facade</code></li>
-</ul>
-</li>
-</ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-29.jpg" alt="건물 만들기"><span class="img-wrapper"><img src="images/slide-29.jpg" alt="건물 만들기"></span></label></p>
-<p><strong>활용 기술</strong>: 3D 모델링, 조명, 재질, UV / 텍스처, 렌더링</p>
-<p><strong>과정 안내</strong>: <a href="https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-01.html">https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-01.html</a></p>
-<h2 id="실습-책상-만들기-1"><a class="header" href="#실습-책상-만들기-1">실습: 책상 만들기 1</a></h2>
-<ul>
-<li>mesh들을 조합하여 책상 만들기</li>
-<li>텍스처는 <a href="https://pixabay.com">pixabay.com</a>에서 다운로드해 사용
-<ul>
-<li>검색어: <code>wood texture</code></li>
-</ul>
-</li>
-</ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-31.jpg" alt="책상 만들기 1"><span class="img-wrapper"><img src="images/slide-31.jpg" alt="책상 만들기 1"></span></label></p>
-<p><strong>활용 기술</strong>: 3D 모델링, 조명, 재질, UV / 텍스처, 렌더링</p>
-<p><strong>과정 안내</strong>: <a href="https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-02.html">https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-02.html</a></p>
-<h2 id="실습-책상-만들기-2"><a class="header" href="#실습-책상-만들기-2">실습: 책상 만들기 2</a></h2>
-<ul>
-<li>Edit 모드를 이용해 1개의 mesh로 책상 만들기</li>
-<li>텍스처는 <a href="https://pixabay.com">pixabay.com</a>에서 다운로드해 사용
-<ul>
-<li>검색어: <code>wood texture</code></li>
-</ul>
-</li>
-</ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-33.jpg" alt="책상 만들기 2"><span class="img-wrapper"><img src="images/slide-33.jpg" alt="책상 만들기 2"></span></label></p>
-<p><strong>활용 기술</strong>: 3D 모델링, 조명, 재질, UV / 텍스처, 렌더링</p>
-<p><strong>과정 안내</strong>: <a href="https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-03.html">https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-03.html</a></p>
-<h2 id="실습-책상-만들기-3"><a class="header" href="#실습-책상-만들기-3">실습: 책상 만들기 3</a></h2>
-<ul>
-<li>하나의 mesh에 다양한 재질 입히기</li>
-</ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-35.jpg" alt="책상 만들기 3"><span class="img-wrapper"><img src="images/slide-35.jpg" alt="책상 만들기 3"></span></label></p>
-<p><strong>활용 기술</strong>: 재질</p>
-<p><strong>과정 안내</strong>: <a href="https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-04.html">https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-04.html</a></p>
-<h2 id="복습문제-2"><a class="header" href="#복습문제-2">복습문제 2</a></h2>
-<p><a href="https://profkim2000.github.io/board/3dgraphics/quiz/quiz-02.html">https://profkim2000.github.io/board/3dgraphics/quiz/quiz-02.html</a></p>
-<div style="break-before: page; page-break-before: always;"></div>
-<h1 id="4-3d-모델링-이론-및-실습이론"><a class="header" href="#4-3d-모델링-이론-및-실습이론">4. 3D 모델링 이론 및 실습이론</a></h1>
-<iframe src="quiz.html?id=3d04" style="display:block; width:70vw; height: 75vh; border: none;"></iframe>
-<div style="break-before: page; page-break-before: always;"></div>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/4YTQkijOcKA?si=FdKqJuY7E2S9YhmL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe><div style="break-before: page; page-break-before: always;"></div>
 <h1 id="도면-3d"><a class="header" href="#도면-3d">도면 3D</a></h1>
 <h2 id="평면도-모델링"><a class="header" href="#평면도-모델링">평면도 모델링</a></h2>
 <ul>
 <li>이미지(평면도) 위에 모델링</li>
 </ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-39.jpg" alt="평면도 모델링"><span class="img-wrapper"><img src="images/slide-39.jpg" alt="평면도 모델링"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261124133516.png" alt=""><span class="img-wrapper"><img src="attachments/20261124133516.png" alt=""></span></label></p>
 <p><strong>활용 기술</strong>: 3D 모델링, 조명, 재질, 렌더링</p>
-<p><strong>과정 안내</strong>: <a href="https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-05.html">https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-05.html</a></p>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-41.jpg" alt="평면도 모델링 과정"><span class="img-wrapper"><img src="images/slide-41.jpg" alt="평면도 모델링 과정"></span></label></p>
-<div style="break-before: page; page-break-before: always;"></div>
-<h1 id="5-도면-3d"><a class="header" href="#5-도면-3d">5. 도면 3D</a></h1>
-<iframe src="quiz.html?id=3d05" style="display:block; width:70vw; height: 75vh; border: none;"></iframe>
+<h1 id="평면도-모델링-1"><a class="header" href="#평면도-모델링-1">평면도 모델링</a></h1>
+<h2 id="평면도-샘플"><a class="header" href="#평면도-샘플">평면도 샘플</a></h2>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/flat3.png" alt=""><span class="img-wrapper"><img src="images/flat3.png" alt=""></span></label><br><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/flat3-withoutgrid.png" alt=""><span class="img-wrapper"><img src="images/flat3-withoutgrid.png" alt=""></span></label></p>
+<h2 id="평면도-제작-실습"><a class="header" href="#평면도-제작-실습">평면도 제작 실습</a></h2>
+<h3 id="12"><a class="header" href="#12">1/2</a></h3>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/Awzspx63zPE?si=zP8corbcBNOResQi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<h3 id="22"><a class="header" href="#22">2/2</a></h3>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/NPmQ2zQyrpM?si=yNj201fWrXz2iVm7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe><div style="break-before: page; page-break-before: always;"></div>
+<h1 id="6-도면-3d"><a class="header" href="#6-도면-3d">6. 도면 3D</a></h1>
+<iframe src="quiz.html?id=3d06" style="display:block; width:70vw; height: 75vh; border: none;"></iframe>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="재질--texture"><a class="header" href="#재질--texture">재질 &amp; texture</a></h1>
 <h2 id="재질"><a class="header" href="#재질">재질</a></h2>
@@ -1655,22 +1660,22 @@ Orthographic Progection(직교투영): 거리에 상관없이 모든 객체가 �
 <li>재질이 보여지는 방법을 물리적인 속성을 이용해 표현(색, 금속성, 거칠기 등)</li>
 <li>통일된 표현법</li>
 </ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-45.jpg" alt="roughness와 metallic 비교"><span class="img-wrapper"><img src="images/slide-45.jpg" alt="roughness와 metallic 비교"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261124133749.png" alt=""><span class="img-wrapper"><img src="attachments/20261124133749.png" alt=""></span></label></p>
 <h2 id="texture텍스처-1"><a class="header" href="#texture텍스처-1">texture(텍스처)</a></h2>
 <ul>
 <li>빌딩 등 model의 겉면 이미지</li>
 </ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-46.jpg" alt="texture"><span class="img-wrapper"><img src="images/slide-46.jpg" alt="texture"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261124131903.png" alt=""><span class="img-wrapper"><img src="attachments/20261124131903.png" alt=""></span></label></p>
 <h2 id="texture텍스처-입히는-방법"><a class="header" href="#texture텍스처-입히는-방법">texture(텍스처) 입히는 방법</a></h2>
 <h3 id="직접-그리기"><a class="header" href="#직접-그리기">직접 그리기</a></h3>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-47.jpg" alt="직접 그리기"><span class="img-wrapper"><img src="images/slide-47.jpg" alt="직접 그리기"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261124134003.png" alt=""><span class="img-wrapper"><img src="attachments/20261124134003.png" alt=""></span></label></p>
 <h3 id="사진-찍어-각-면에-붙이기"><a class="header" href="#사진-찍어-각-면에-붙이기">사진 찍어 각 면에 붙이기</a></h3>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-48.jpg" alt="사진 찍어 붙이기"><span class="img-wrapper"><img src="images/slide-48.jpg" alt="사진 찍어 붙이기"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261124134029.png" alt=""><span class="img-wrapper"><img src="attachments/20261124134029.png" alt=""></span></label></p>
 <h3 id="uv"><a class="header" href="#uv">UV</a></h3>
 <ul>
 <li>정육면체를 펴서 파워포인트로 주사위 텍스처 만들기</li>
 </ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-49.jpg" alt="UV 주사위 텍스처"><span class="img-wrapper"><img src="images/slide-49.jpg" alt="UV 주사위 텍스처"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261124134044.png" alt=""><span class="img-wrapper"><img src="attachments/20261124134044.png" alt=""></span></label></p>
 <h2 id="normal노말"><a class="header" href="#normal노말">normal(노말)</a></h2>
 <ul>
 <li>살짝 긁힌 상처, 홈 등을 표현</li>
@@ -1678,12 +1683,18 @@ Orthographic Progection(직교투영): 거리에 상관없이 모든 객체가 �
 <li>’이 부분은 상처 난 것처럼 살짝 파인 부분이다’를 표현하는 가장 빠른 처리 방법</li>
 <li>그림자로 모델의 상처 부위 깊이를 표현</li>
 </ul>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-51.jpg" alt="normal 미적용 vs 적용"><span class="img-wrapper"><img src="images/slide-51.jpg" alt="normal 미적용 vs 적용"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261124134115.png" alt=""><span class="img-wrapper"><img src="attachments/20261124134115.png" alt=""></span></label></p>
 <h2 id="재질-예시"><a class="header" href="#재질-예시">재질 예시</a></h2>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-52.jpg" alt="나무, 옷감, 금속 재질"><span class="img-wrapper"><img src="images/slide-52.jpg" alt="나무, 옷감, 금속 재질"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261124134222.png" alt=""><span class="img-wrapper"><img src="attachments/20261124134222.png" alt=""></span></label></p>
 <h2 id="재질-실습"><a class="header" href="#재질-실습">재질 실습</a></h2>
-<p><strong>과정 안내</strong>: <a href="https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-06.html">https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-06.html</a></p>
-<div style="break-before: page; page-break-before: always;"></div>
+<h3 id="pbr-기본-설정값-base-color-roghness-metalic-설정"><a class="header" href="#pbr-기본-설정값-base-color-roghness-metalic-설정">PBR 기본 설정값: base color, roghness, metalic 설정</a></h3>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/OPMJZtmJ-B8?si=vBAsOfbhUF9h7rqA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<h3 id="텍스처-직접-그리기"><a class="header" href="#텍스처-직접-그리기">텍스처 직접 그리기</a></h3>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/_IQL32ubQLw?si=_HwiMmXo27s9DUlw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<h3 id="텍스처-입히기---주사위-텍스처"><a class="header" href="#텍스처-입히기---주사위-텍스처">텍스처 입히기 - 주사위 텍스처</a></h3>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/4CRuWF-qwf4?si=0YQcENBQDCVZs133" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<h3 id="normal-map노말맵---실사같은-나무-상자"><a class="header" href="#normal-map노말맵---실사같은-나무-상자">normal map(노말맵) - 실사같은 나무 상자</a></h3>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/QOz2pa5GBtQ?si=PSXBdZhe9CJn--8Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe><div style="break-before: page; page-break-before: always;"></div>
 <h1 id="light"><a class="header" href="#light">Light</a></h1>
 <h2 id="light조명-1"><a class="header" href="#light조명-1">Light(조명)</a></h2>
 <ul>
@@ -1691,48 +1702,50 @@ Orthographic Progection(직교투영): 거리에 상관없이 모든 객체가 �
 <li>빛을 이용해 생기는 그림자는 현실감을 주는 중요한 요소</li>
 </ul>
 <h2 id="point-조명"><a class="header" href="#point-조명">point 조명</a></h2>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-56.jpg" alt="point 조명"><span class="img-wrapper"><img src="images/slide-56.jpg" alt="point 조명"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261124134400.png" alt=""><span class="img-wrapper"><img src="attachments/20261124134400.png" alt=""></span></label></p>
 <ul>
 <li>전구 느낌의 조명</li>
 <li>조명이 있는 곳은 밝고 주변은 점점 어두워짐</li>
 </ul>
 <h2 id="sun-조명"><a class="header" href="#sun-조명">sun 조명</a></h2>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-57.jpg" alt="sun 조명"><span class="img-wrapper"><img src="images/slide-57.jpg" alt="sun 조명"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261124134417.png" alt=""><span class="img-wrapper"><img src="attachments/20261124134417.png" alt=""></span></label></p>
 <ul>
 <li>태양 느낌의 조명</li>
 <li>위치는 상관없고 방향만 중요</li>
 <li>화면 전체에 일정한 밝기 제공</li>
 </ul>
 <h2 id="spot-조명"><a class="header" href="#spot-조명">Spot 조명</a></h2>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-58.jpg" alt="Spot 조명"><span class="img-wrapper"><img src="images/slide-58.jpg" alt="Spot 조명"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261124134429.png" alt=""><span class="img-wrapper"><img src="attachments/20261124134429.png" alt=""></span></label></p>
 <ul>
 <li>공연장 스포트라이트 느낌의 조명</li>
 <li>빛이 퍼지는 모양을 고깔 모양으로 그려볼 수 있다</li>
 <li>주목받는 대상을 강조하기 위해 사용</li>
 </ul>
 <h2 id="area-조명"><a class="header" href="#area-조명">Area 조명</a></h2>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-59.jpg" alt="Area 조명"><span class="img-wrapper"><img src="images/slide-59.jpg" alt="Area 조명"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261124134444.png" alt=""><span class="img-wrapper"><img src="attachments/20261124134444.png" alt=""></span></label></p>
 <ul>
 <li>창을 통해 들어오는 빛이나 TV, 모니터에서 퍼져 나오는 빛을 표현</li>
 <li>빛이 뒤로 퍼지지 않는다</li>
 </ul>
 <h2 id="조명-실습"><a class="header" href="#조명-실습">조명 실습</a></h2>
-<p><strong>과정 안내</strong>: <a href="https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-07.html">https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-07.html</a></p>
-<h2 id="복습문제-3"><a class="header" href="#복습문제-3">복습문제 3</a></h2>
-<p><a href="https://profkim2000.github.io/board/3dgraphics/quiz/quiz-03.html">https://profkim2000.github.io/board/3dgraphics/quiz/quiz-03.html</a></p>
-<div style="break-before: page; page-break-before: always;"></div>
-<h1 id="7-light"><a class="header" href="#7-light">7. Light</a></h1>
-<iframe src="quiz.html?id=3d07" style="display:block; width:70vw; height: 75vh; border: none;"></iframe>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/gt2904eZR3w?si=O1ESq4RNMM51NRId" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe><div style="break-before: page; page-break-before: always;"></div>
+<h1 id="8-light"><a class="header" href="#8-light">8. Light</a></h1>
+<iframe src="quiz.html?id=3d08" style="display:block; width:70vw; height: 75vh; border: none;"></iframe>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="render-실습"><a class="header" href="#render-실습">Render 실습</a></h1>
 <h2 id="렌더링-실습"><a class="header" href="#렌더링-실습">렌더링 실습</a></h2>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/slide-64.jpg" alt="렌더링 실습"><span class="img-wrapper"><img src="images/slide-64.jpg" alt="렌더링 실습"></span></label></p>
-<p><strong>과정 안내</strong>: <a href="https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-08.html">https://profkim2000.github.io/board/3dgraphics/tutorials/tutorial-08.html</a></p>
-<h2 id="복습문제-4"><a class="header" href="#복습문제-4">복습문제 4</a></h2>
-<p><a href="https://profkim2000.github.io/board/3dgraphics/quiz/quiz-04.html">https://profkim2000.github.io/board/3dgraphics/quiz/quiz-04.html</a></p>
+<h2 id="재료-다운로드"><a class="header" href="#재료-다운로드">재료 다운로드</a></h2>
+<ul>
+<li><a href="fbx/A06.fbx">랜디 3D 모델 fbx</a></li>
+<li><a href="fbx/texture_01.png">랜디 3D 모델 texture</a></li>
+</ul>
+<h2 id="렌더-기본"><a class="header" href="#렌더-기본">렌더 기본</a></h2>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/IjO113ZrykQ?si=GkwvReLNk3-BEg4V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<h2 id="랜디를-이용한-fog-렌더링"><a class="header" href="#랜디를-이용한-fog-렌더링">랜디를 이용한 fog 렌더링</a></h2>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/wEBUqNlGyts?si=zRgOa0gM8JM-Wz_w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="8-render-실습"><a class="header" href="#8-render-실습">8. Render 실습</a></h1>
-<iframe src="quiz.html?id=3d08" style="display:block; width:70vw; height: 75vh; border: none;"></iframe>
+<h1 id="9-render-실습"><a class="header" href="#9-render-실습">9. Render 실습</a></h1>
+<iframe src="quiz.html?id=3d09" style="display:block; width:70vw; height: 75vh; border: none;"></iframe>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="참고자료"><a class="header" href="#참고자료">참고자료</a></h1>
 <h2 id="blender-공식-홈페이지"><a class="header" href="#blender-공식-홈페이지">blender 공식 홈페이지</a></h2>
