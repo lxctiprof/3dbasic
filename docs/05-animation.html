@@ -36,7 +36,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-9f7055ba.js";
+            window.path_to_searchindex_js = "searchindex-68d1bb9f.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-2fd6f7e7.js"></script>
@@ -197,6 +197,32 @@
 </li>
 </ul>
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4YTQkijOcKA?si=FdKqJuY7E2S9YhmL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<h2 id="리깅-실습"><a class="header" href="#리깅-실습">리깅 실습</a></h2>
+<p>아래는 모두 숫자키패드 1을 눌러 front orthographic 모드로 보며 작업한다.</p>
+<h3 id="모델링"><a class="header" href="#모델링">모델링</a></h3>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261125082752.png" alt=""><span class="img-wrapper"><img src="attachments/20261125082752.png" alt=""></span></label></p>
+<p>extrude, scale 등을 이용해 위와 같이 모델링한다.</p>
+<h3 id="armature-추가"><a class="header" href="#armature-추가">armature 추가</a></h3>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261125082956.png" alt=""><span class="img-wrapper"><img src="attachments/20261125082956.png" alt=""></span></label></p>
+<p>*armature: 뼈대, 골조</p>
+<p>추가한 armature가 보여지게 하기 위해</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261125083151.png" alt=""><span class="img-wrapper"><img src="attachments/20261125083151.png" alt=""></span></label></p>
+<h3 id="armature-위치-크기-조정"><a class="header" href="#armature-위치-크기-조정">armature 위치, 크기 조정</a></h3>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261125083238.png" alt=""><span class="img-wrapper"><img src="attachments/20261125083238.png" alt=""></span></label></p>
+<h3 id="armature-에서-extrude"><a class="header" href="#armature-에서-extrude">armature 에서 extrude</a></h3>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261125083327.png" alt=""><span class="img-wrapper"><img src="attachments/20261125083327.png" alt=""></span></label></p>
+<h3 id="뼈대armature와-model-연결"><a class="header" href="#뼈대armature와-model-연결">뼈대(armature)와 model 연결</a></h3>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261125083455.png" alt=""><span class="img-wrapper"><img src="attachments/20261125083455.png" alt=""></span></label></p>
+<p>object 모드에서 먼저 model을 선택하고, shift 키를 누른 상태에서 뼈대 선택</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261125083532.png" alt=""><span class="img-wrapper"><img src="attachments/20261125083532.png" alt=""></span></label></p>
+<p>ctrl + p 를 눌러 아래와 같이 set parent to 메뉴를 열어,</p>
+<p>Armature deform <strong>With Automatic Weights</strong> 를 선택</p>
+<h3 id="pose-모드에서-뼈대-transform"><a class="header" href="#pose-모드에서-뼈대-transform">pose 모드에서 뼈대 transform</a></h3>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261125083804.png" alt=""><span class="img-wrapper"><img src="attachments/20261125083804.png" alt=""></span></label></p>
+<p>pose 모드로 변경 후,</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="attachments/20261125083826.png" alt=""><span class="img-wrapper"><img src="attachments/20261125083826.png" alt=""></span></label></p>
+<p>위 뼈대를 회전시켜 model의 움직임을 만든다.</p>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
