@@ -36,10 +36,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-accde64b.js";
+            window.path_to_searchindex_js = "../searchindex-d13e9f38.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-2fd6f7e7.js"></script>
+        <script src="../toc-a110eae4.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -183,9 +183,7 @@
 </li>
 <li>
 <p>점, 선, 면이 모여서 geometry를 이룰 때 <b>메쉬(mesh)</b>라고 함</p>
-  <img src="../images/1-46.png" width="90%" height="90%"> 
-</li>
-</ul>
+<p><img src="../images/1-46.png" width="90%" height="90%"> <br></p>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -197,8 +195,10 @@
 </tbody>
 </table>
 </div>
+</li>
+</ul>
 <blockquote>
-<p>편집 모드에서 선택 단위 전환: <strong><code>1</code> 정점 / <code>2</code> 모서리 / <code>3</code> 면</strong> (키보드 상단 숫자)</p>
+<p>💡 편집 모드에서 선택 단위 전환: <strong><code>1</code> 정점 / <code>2</code> 모서리 / <code>3</code> 면</strong> (키보드 상단 숫자)</p>
 </blockquote>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eHava4SGxO0?si=vx4XQS_Zn7sRZEv2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
 <h2 id="2-extrude"><a class="header" href="#2-extrude">2. Extrude</a></h2>
@@ -207,8 +207,8 @@
 <p>Edit Mode에서 오브젝트의 요소를 <strong>밀어내는 기능</strong></p>
 </li>
 <li>
-<p>요소 선택 후 <strong>단축키 E</strong>를 클릭하여 점, 선, 면을 노란색 핸들을 드래그하여 밀어냄</p>
-  <img src="../images/1-47.png" width="100%" height="100%"> 
+<p>요소 선택 후 <strong>단축키 E</strong>를 클릭하여 점, 선, 면을 <strong>노란색 핸들을 MLB 클릭하여 드래그</strong>하여 밀어냄</p>
+<p><img src="../images/1-47.png" width="100%" height="100%"> <br></p>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/D8MKO1iRKmE?si=vn0Mibg0uCj_JnEm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
 </li>
 </ul>
@@ -218,22 +218,53 @@
 <p>오브젝트의 <strong>각진 부분을 다듬는 기능</strong>으로 Bevel Vertices와 Bevel Edges 기능으로 구분</p>
 </li>
 <li>
-<p>오브젝트의 Edge 또는 Face를 선택한 후 <strong>노란색 핸들을 MLB 클릭하여 드래그</strong></p>
-  <img src="../images/1-48.png" width="90%" height="90%"> 
+<p>오브젝트의 Edge 또는 Face를 선택한 후 <b>단축키 <code>ctrl + B</code> 또는 Bevel 툴</b> 선택 후 <strong>노란색 핸들을 MLB 클릭하여 드래그</strong></p>
+<p><img src="../images/1-48.png" width="90%" height="90%"> <br></p>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/jbkGiOQk0KY?si=tqYzyulIfPqUWpP-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
 </li>
 </ul>
-<h2 id="4-loop-cut"><a class="header" href="#4-loop-cut">4. Loop Cut</a></h2>
+<h2 id="4-inset-faces"><a class="header" href="#4-inset-faces">4. Inset Faces</a></h2>
+<ul>
+<li>
+<p>Face의 안쪽에 <strong>새로운 Face를 생성</strong>하는 기능</p>
+</li>
+<li>
+<p>생성하고자 하는 면을 선택하고 <strong>단축키 I</strong> 클릭하여 마우스로 드래그</p>
+</li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/t7rSrInkXqc?si=Cf5oqrWNLnoUGUeH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<h2 id="5-loop-cut"><a class="header" href="#5-loop-cut">5. Loop Cut</a></h2>
 <ul>
 <li>
 <p>종이를 길게 오려내듯이 <strong>Face를 연속적으로 나누는 기능</strong>으로 표면이 연속적으로 흘러가는 모델링에서 유용하게 사용</p>
 </li>
 <li>
-<p>단, Face를 이루는 Vertex가 4개일 때만 Loop Cut 사용 가능</p>
-  <img src="../images/1-49.png" width="80%" height="80%"> 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/anqBDBxvsQU?si=IcIJGq0U9VpkWqdZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<p><b>단축키 <code>Ctrl + R</code></b> 또는 Loop Cut 툴 선택 후 왼쪽 마우스로 클릭하고 원하는 위치로 이동하여 설정</p>
 </li>
 </ul>
+<blockquote>
+<p>💡 단, Face를 이루는 <strong>Vertex가 4개</strong>일 때만 Loop Cut 사용 가능</p>
+</blockquote>
+<p><img src="../images/1-49.png" width="80%" height="80%"> <br></p>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/anqBDBxvsQU?si=IcIJGq0U9VpkWqdZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<h2 id="6-핵심-단축키-요약표"><a class="header" href="#6-핵심-단축키-요약표">6. 핵심 단축키 요약표</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>키</th><th>기능</th><th>키</th><th>기능</th></tr>
+</thead>
+<tbody>
+<tr><td><strong><code>Shift + A</code></strong></td><td>추가</td><td><strong><code>Tab</code></strong></td><td>편집모드</td></tr>
+<tr><td><strong><code>G / R / S</code></strong></td><td>이동/회전/크기</td><td><strong><code>E</code></strong></td><td>돌출 (Extrude)</td></tr>
+<tr><td><strong><code>X</code></strong></td><td>삭제</td><td><strong><code>I</code></strong></td><td>인셋(Inset)</td></tr>
+<tr><td><strong><code>Shift + D</code></strong></td><td>복제</td><td><strong><code>Ctrl + B</code></strong></td><td>베벨 (Bevel)</td></tr>
+<tr><td><strong><code>Ctrl + A</code></strong></td><td>적용</td><td><strong><code>Ctrl + R</code></strong></td><td>루프컷 (Loop Cut)</td></tr>
+<tr><td><strong><code>Ctrl + Z</code></strong></td><td>되돌리기</td><td><strong><code>F</code></strong></td><td>면 만들기</td></tr>
+<tr><td><strong><code>N</code></strong></td><td>사이드바</td><td><strong><code>M</code></strong></td><td>병합(Merge)</td></tr>
+<tr><td><strong><code>Ctrl + S</code></strong></td><td>저장</td><td><strong><code>Ctrl + Shift + Z</code></strong></td><td>다시 실행</td></tr>
+</tbody>
+</table>
+</div>
 
                     </main>
 

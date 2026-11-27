@@ -36,10 +36,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-accde64b.js";
+            window.path_to_searchindex_js = "../searchindex-d13e9f38.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-2fd6f7e7.js"></script>
+        <script src="../toc-a110eae4.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -176,34 +176,33 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="오브젝트-다루기"><a class="header" href="#오브젝트-다루기">오브젝트 다루기</a></h1>
-<h2 id="1-오브젝트-추가삭제"><a class="header" href="#1-오브젝트-추가삭제">1. 오브젝트 추가·삭제</a></h2>
+<h2 id="1-오브젝트-추가--삭제"><a class="header" href="#1-오브젝트-추가--삭제">1. 오브젝트 추가 · 삭제</a></h2>
 <div class="table-wrapper">
 <table>
 <thead>
 <tr><th>동작</th><th>단축키</th></tr>
 </thead>
 <tbody>
-<tr><td>추가 메뉴</td><td><code>Shift + A</code> (Mesh &gt; Cube, Plane, Cylinder …)</td></tr>
-<tr><td>삭제</td><td><code>X</code> 또는 <code>Delete</code></td></tr>
-<tr><td>복제</td><td><code>Shift + D</code> (복제 후 바로 이동, 우클릭/<code>Esc</code>로 위치 취소)</td></tr>
+<tr><td><strong>추가</strong></td><td><code>Shift + A</code> (Mesh &gt; Cube, Plane, Cylinder …)</td></tr>
+<tr><td><strong>삭제</strong></td><td><code>X</code> 또는 <code>Delete</code></td></tr>
+<tr><td><strong>복제</strong></td><td><code>Shift + D</code> (복제 후 바로 이동, 우클릭/<code>Esc</code>로 위치 취소)</td></tr>
 <tr><td>이름 변경</td><td><code>F2</code></td></tr>
 <tr><td>숨기기/보이기</td><td><code>H</code> / <code>Alt + H</code></td></tr>
 </tbody>
 </table>
 </div>
+<br>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/KPiYD4eTqUI?si=WJ6Doy3uoW5t5DGj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
 <blockquote>
-<p>추가 직후 좌측 하단 <strong>Adjust Last Operation</strong> 패널을 펼치면 크기 · 분할 수 등을 바꿀 수 있음</p>
+<p>💡 추가 직후 좌측 하단 <strong>Adjust Last Operation</strong> 패널을 펼치면 크기 · 분할 수 등을 바꿀 수 있음</p>
 </blockquote>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KPiYD4eTqUI?si=WJ6Doy3uoW5t5DGj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
 <h2 id="2-선택-방법"><a class="header" href="#2-선택-방법">2. 선택 방법</a></h2>
 <ul>
 <li>
-<p>마우스와 키패드를 이용하여 단일선택, 다중선택, 선택반전 등 기본 선택 기능 가능</p>
+<p>마우스와 키패드를 이용하여 <strong>단일선택, 다중선택, 선택반전</strong> 등 기본 선택 기능 가능</p>
 </li>
 <li>
 <p>선택한 오브젝트를 활성 오브젝트(Active Object)라 하고, 4가지 선택 툴 제공</p>
-</li>
-</ul>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -211,31 +210,39 @@
 </thead>
 <tbody>
 <tr><td>선택</td><td>좌클릭</td></tr>
-<tr><td>단일 선택</td><td>MLB</td></tr>
-<tr><td>다중 선택</td><td><code>Shift</code> + MLB</td></tr>
-<tr><td>선택 반전</td><td><code>Ctrl + I</code></td></tr>
-<tr><td>전체 선택/해제</td><td><code>A</code> / <code>Alt + A</code></td></tr>
+<tr><td><strong>단일 선택</strong></td><td>MLB</td></tr>
+<tr><td><strong>다중 선택</strong></td><td><code>Shift</code> + MLB</td></tr>
+<tr><td><strong>선택 반전</strong></td><td><code>Ctrl + I</code></td></tr>
+<tr><td><strong>전체 선택/해제</strong></td><td><code>A</code> / <code>Alt + A</code></td></tr>
 <tr><td>박스 선택</td><td>빈 곳 드래그</td></tr>
 </tbody>
 </table>
 </div>
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xGQNcOsmcWY?si=no22_g4YZeNp8r4e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</li>
+</ul>
 <h2 id="3-변환transform-3종-세트"><a class="header" href="#3-변환transform-3종-세트">3. 변환(Transform) 3종 세트</a></h2>
 <ul>
 <li>
 <h3 id="오브젝트-이동grab"><a class="header" href="#오브젝트-이동grab">오브젝트 이동(Grab)</a></h3>
 <ul>
 <li>
-<p>오브젝트별 중심점(Origin)을 이동시킨다는 의미</p>
+<p>오브젝트별 <b>중심점(Origin)을 이동</b>시킨다는 의미</p>
 </li>
 <li>
-<p>단축키(G) 또는 사이드바(N)의 [Transform] 탭에서 Location 값을 변경하여 이동</p>
+<p><b>단축키(G)</b> 또는 사이드바(N)의 [Transform] 탭에서 Location 값을 변경하여 이동<br></p>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/3TVR26rzayw?si=8HY-oxInqEK0w9E2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
 </li>
 </ul>
 </li>
 <li>
 <h3 id="오브젝트-회전rotate"><a class="header" href="#오브젝트-회전rotate">오브젝트 회전(Rotate)</a></h3>
 <ul>
-<li>단축키(R)와 사이드바의 [Transform] 탭에서 Rotation 값을 변경하여 회전</li>
+<li>
+<p><b>단축키(R)</b>와 사이드바의 [Transform] 탭에서 Rotation 값을 변경하여 회전<br></p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/GH7XS5_q_ME?si=M2x-g14_mgQup37K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</li>
 </ul>
 </li>
 <li>
@@ -245,7 +252,8 @@
 <p>오브젝트 크기를 몇 배로 조정할지 결정할 때 사용하는 용어</p>
 </li>
 <li>
-<p>단축키(S)와 사이드바의 [Transform] 탭에서 Scale 값을 변경하여 회전</p>
+<p><b>단축키(S)</b>와 사이드바의 [Transform] 탭에서 Scale 값을 변경하여 회전<br></p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/3hAEOzz7R_s?si=8Lvn8pHqVcyzm2Ih" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
 </li>
 </ul>
 </li>
@@ -253,14 +261,10 @@
 <h3 id="정확한-값-입력-n-패널"><a class="header" href="#정확한-값-입력-n-패널">정확한 값 입력: N 패널</a></h3>
 <ul>
 <li>
-<p><code>N</code> 키로 사이드바 &gt; <strong>Item</strong> 탭 &gt; Location / Rotation / <strong>Dimensions</strong> 에 직접 입력</p>
+<p><code>N</code> 키로 <b>사이드바 &gt; Item 탭 &gt; Location / Rotation / Dimensions</b>에 직접 입력</p>
 </li>
 <li>
-<p>건물처럼 실제 크기가 있는 모델은 <strong>Dimensions</strong> 값을 확인하며 작업 (예: 10m × 8m × 3m)</p>
-</li>
-</ul>
-</li>
-</ul>
+<p>건물처럼 실제 크기가 있는 모델은 <strong>Dimensions</strong> 값을 확인하며 작업 (예: 10m × 8m × 3m)<br></p>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -273,24 +277,10 @@
 </tbody>
 </table>
 </div>
-<h2 id="핵심-단축키-요약표"><a class="header" href="#핵심-단축키-요약표">핵심 단축키 요약표</a></h2>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>키</th><th>기능</th><th>키</th><th>기능</th></tr>
-</thead>
-<tbody>
-<tr><td><code>Shift+A</code></td><td>추가</td><td><code>Tab</code></td><td>편집모드</td></tr>
-<tr><td><code>G/R/S</code></td><td>이동/회전/크기</td><td><code>E</code></td><td>돌출(Extrude)</td></tr>
-<tr><td><code>X</code></td><td>삭제</td><td><code>I</code></td><td>인셋(Inset)</td></tr>
-<tr><td><code>Shift+D</code></td><td>복제</td><td><code>Ctrl+B</code></td><td>베벨(Bevel)</td></tr>
-<tr><td><code>Ctrl+A</code></td><td>적용</td><td><code>Ctrl+R</code></td><td>루프컷</td></tr>
-<tr><td><code>Ctrl+Z</code></td><td>되돌리기</td><td><code>F</code></td><td>면 만들기</td></tr>
-<tr><td><code>N</code></td><td>사이드바</td><td><code>M</code></td><td>병합(Merge)</td></tr>
-<tr><td><code>Ctrl+S</code></td><td>저장</td><td><code>Ctrl+Shift+Z</code></td><td>다시 실행</td></tr>
-</tbody>
-</table>
-</div>
+</li>
+</ul>
+</li>
+</ul>
 
                     </main>
 

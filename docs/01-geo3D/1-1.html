@@ -36,10 +36,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-accde64b.js";
+            window.path_to_searchindex_js = "../searchindex-d13e9f38.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-2fd6f7e7.js"></script>
+        <script src="../toc-a110eae4.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -219,7 +219,7 @@
 </thead>
 <tbody>
 <tr><td>좌표</td><td>X, Y</td><td>X, Y, Z</td></tr>
-<tr><td>건물</td><td>외곽선</td><td>외곽선과 높이·지붕 형상</td></tr>
+<tr><td>건물</td><td>외곽선</td><td>외곽선과 높이 · 지붕 형상</td></tr>
 <tr><td>도로</td><td>중심선 또는 면</td><td>폭 · 높이 · 경사 · 포장 구조</td></tr>
 <tr><td>지형</td><td>등고선 · 표고점 · DEM</td><td>표면 메시 또는 높이장</td></tr>
 <tr><td><br></td><td></td><td></td></tr>
@@ -316,7 +316,7 @@
 <p>항공레이저 측량</p>
 <ul>
 <li>
-<p><strong>지표면의 높이값을 정밀 추출</strong>하기 위해 항공기에 라이다(LiDAR)를 부착하여 지형을 스캔, 3차원 지형데이터 정보(수치표고모형, Digital Elevation Model)를 취득</p>
+<p><strong>지표면의 높이값을 정밀 추출</strong>하기 위해 항공기에 라이다(LiDAR)를 부착하여 지형을 스캔, 3차원 지형데이터 정보(수치표고모형)를 취득</p>
   <img src="../images/1-7.png" width="80%" height="80%"> 
 </li>
 </ul>
@@ -376,18 +376,6 @@
 </ul>
 </li>
 <li>
-<h3 id="다면체-데이터"><a class="header" href="#다면체-데이터">다면체 데이터</a></h3>
-<ul>
-<li>
-<p>2차원의 <strong>폴리곤 데이터에 높이 값을 적용</strong>하여 다면체 데이터로 생성</p>
-</li>
-<li>
-<p>수치지형도를 기반으로 건물데이터를 생성할 때 주로 사용</p>
-  <img src="../images/1-14.png" width="90%" height="90%"> 
-</li>
-</ul>
-</li>
-<li>
 <h3 id="평면-데이터"><a class="header" href="#평면-데이터">평면 데이터</a></h3>
 <ul>
 <li>
@@ -396,6 +384,18 @@
 <li>
 <p>주로 도로, 인도 등의 높이가 없다고 판단되는 데이터 표출에 사용</p>
   <img src="../images/1-15.png" width="90%" height="90%"> 
+</li>
+</ul>
+</li>
+<li>
+<h3 id="다면체-데이터"><a class="header" href="#다면체-데이터">다면체 데이터</a></h3>
+<ul>
+<li>
+<p>2차원의 <strong>폴리곤 데이터에 높이 값을 적용</strong>하여 다면체 데이터로 생성</p>
+</li>
+<li>
+<p>수치지형도를 기반으로 건물데이터를 생성할 때 주로 사용</p>
+  <img src="../images/1-14.png" width="90%" height="90%"> 
 </li>
 </ul>
 </li>
@@ -488,10 +488,10 @@
 <tr><th>포맷</th><th>확장자</th><th>특징</th><th>용도</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>glTF / GLB</strong></td><td>.gltf / .glb</td><td>웹용 표준, 용량 작음, 재질·텍스처·애니메이션 포함 (“3D의 JPEG”)</td><td><strong>WebGIS, 웹 3D</strong></td></tr>
-<tr><td>OBJ</td><td>.obj (+.mtl)</td><td>단순·범용, 텍스트 기반, 애니메이션 없음</td><td>교환</td></tr>
+<tr><td><strong>glTF / GLB</strong></td><td>.gltf / .glb</td><td>웹용 표준, 용량 작음, 재질 · 텍스처 · 애니메이션 포함 (“3D의 JPEG”)</td><td><strong>WebGIS, 웹 3D</strong></td></tr>
+<tr><td>OBJ</td><td>.obj (+.mtl)</td><td>단순 · 범용, 텍스트 기반, 애니메이션 없음</td><td>교환</td></tr>
 <tr><td>FBX</td><td>.fbx</td><td>애니메이션 포함, 게임 엔진</td><td>Unity, Unreal</td></tr>
-<tr><td>STL</td><td>.stl</td><td>형상만(색·재질 없음)</td><td>3D 프린팅</td></tr>
+<tr><td>STL</td><td>.stl</td><td>형상만(색 · 재질 없음)</td><td>3D 프린팅</td></tr>
 <tr><td>Blender</td><td>.blend</td><td>Blender 원본(모든 정보 보존)</td><td>작업 원본</td></tr>
 <tr><td>IFC</td><td>.ifc</td><td>BIM 표준</td><td>건축</td></tr>
 <tr><td>CityGML</td><td>.gml</td><td><strong>속성 + 구조</strong> 가진 도시 모델 국제 표준</td><td>공간정보</td></tr>
@@ -507,11 +507,11 @@
 <h3 id="포맷-선택-기준"><a class="header" href="#포맷-선택-기준">포맷 선택 기준</a></h3>
 </li>
 </ul>
-<pre><code>웹에서 가볍게 보여주고 싶다             → glb
-Cesium에 도시 전체를 올리고 싶다        → glb → 3D Tiles 변환
-Unity/Unreal로 가져가야 한다           → fbx 또는 glb
-3D 프린팅이 목적이다                   → stl
-BIM · 속성 관리가 중요하다             → IFC, CityGML
+<pre><code>웹에서 가볍게 보여주고 싶다            → glb
+Cesium에 도시 전체를 올리고 싶다       → glb → 3D Tiles 변환
+Unity/Unreal로 가져가야 한다          → fbx 또는 glb
+3D 프린팅이 목적이다                  → stl
+BIM · 속성 관리가 중요하다            → IFC, CityGML
 </code></pre>
 
                     </main>
